@@ -138,6 +138,16 @@ ul { list-style:none; }
 .service-link { display:inline-block; font-size:13px; font-weight:600; color:var(--ms-blue); }
 .service-link:hover { color:var(--ms-blue-dark); }
 
+/* ===== Team Grid ===== */
+.team-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.team-card { background:var(--neutral-white); border:1px solid var(--neutral-200); border-radius:var(--radius-lg); padding:28px 20px; text-align:center; transition:all var(--transition); }
+.team-card:hover { box-shadow:var(--shadow-md); transform:translateY(-3px); }
+.team-card.team-lead { grid-column:1 / -1; background:linear-gradient(135deg,#f0f6ff,#e8f0fe); border-color:var(--ms-blue-light); }
+.team-icon { width:52px; height:52px; border-radius:50%; background:var(--ms-blue-light); color:var(--ms-blue); display:flex; align-items:center; justify-content:center; font-size:20px; margin:0 auto 14px; }
+.team-lead .team-icon { background:linear-gradient(135deg,var(--ms-blue),var(--ms-blue-dark)); color:white; width:60px; height:60px; font-size:24px; }
+.team-card h3 { font-size:16px; font-weight:600; color:var(--neutral-900); margin-bottom:4px; }
+.team-role { font-size:13px; color:var(--neutral-600); }
+
 /* ===== Announcements ===== */
 .announcements-section { padding:64px 0; background:var(--neutral-50); }
 .announcement-list { max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
@@ -346,7 +356,7 @@ ul { list-style:none; }
 
 /* ===== Responsive ===== */
 @media (max-width:1200px) {
-    .card-grid.four-col, .severity-grid, .template-grid, .kpi-grid { grid-template-columns:repeat(2,1fr); }
+    .card-grid.four-col, .severity-grid, .template-grid, .kpi-grid, .team-grid { grid-template-columns:repeat(2,1fr); }
     .services-grid, .tools-grid, .engineer-onboarding { grid-template-columns:repeat(2,1fr); }
 }
 @media (max-width:900px) {
@@ -359,7 +369,7 @@ ul { list-style:none; }
     .footer-grid { grid-template-columns:1fr; gap:24px; }
 }
 @media (max-width:640px) {
-    .card-grid.four-col, .severity-grid, .services-grid, .template-grid, .kpi-grid, .tools-grid, .engineer-onboarding { grid-template-columns:1fr; }
+    .card-grid.four-col, .severity-grid, .services-grid, .template-grid, .kpi-grid, .tools-grid, .engineer-onboarding, .team-grid { grid-template-columns:1fr; }
     .hero h1, .page-hero h1 { font-size:26px; }
     .hero-actions { flex-direction:column; align-items:center; }
 }
