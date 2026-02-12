@@ -119,6 +119,7 @@ ul { list-style:none; }
 .card-icon.orange { background:var(--ms-orange-light); color:var(--ms-orange); }
 .card-icon.gold { background:var(--ms-gold-light); color:var(--ms-gold); }
 .card-icon.blue { background:var(--ms-blue-light); color:var(--ms-blue); }
+.card-icon.teal { background:#e0f7f5; color:#008272; }
 .card-content h3 { font-size:16px; font-weight:600; color:var(--neutral-900); margin-bottom:8px; }
 .card-content p { font-size:13px; color:var(--neutral-600); line-height:1.5; margin-bottom:12px; }
 .card-meta { display:flex; gap:16px; font-size:11px; color:var(--neutral-500); }
