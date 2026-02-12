@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSfMSC Portal - Mission Critical Services for Microsoft Security Cloud</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-section">
+                    <img src="assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo">
+                    <span class="nav-divider">|</span>
+                    <a href="index.html" class="portal-title-link">MCSfMSC Portal</a>
+                </div>
+            </div>
+            <nav class="nav-center">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="pages/issue-resolution.html" class="nav-link">Issue Resolution</a>
+                <a href="pages/playbooks.html" class="nav-link">Playbooks & Videos</a>
+                <a href="pages/delivery.html" class="nav-link">Delivery</a>
+                <a href="pages/onboarding.html" class="nav-link">Onboarding</a>
+            </nav>
+            <div class="nav-right">
+                <button class="icon-btn" title="Search (Ctrl+K)" id="searchToggle"><i class="fas fa-search"></i></button>
+                <div class="user-avatar" title="User Profile"><i class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+        <div class="search-bar" id="searchBar">
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" placeholder="Search resources, playbooks, documents..." id="searchInput">
+                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Microsoft Security</div>
+            <h1>Mission Critical Services<br>for Microsoft Security Cloud</h1>
+            <p class="hero-subtitle">Your centralized hub for security service delivery, onboarding, playbooks, and issue resolution resources</p>
+            <div class="hero-actions">
+                <a href="pages/onboarding.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
+                <a href="pages/onboarding.html#customer-onboarding-flow" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Onboard a Customer</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item"><div class="stat-number">150+</div><div class="stat-label">Active Customers</div></div>
+                <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Playbooks</div></div>
+                <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Issues Resolved</div></div>
+                <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Security Services</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Access Cards -->
+    <section class="quick-access">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Quick Access</h2>
+                <p>Access the most important resources for MCSfMSC operations</p>
+            </div>
+            <div class="card-grid four-col">
+                <a href="pages/issue-resolution.html" class="access-card">
+                    <div class="card-icon purple"><i class="fas fa-bug"></i></div>
+                    <div class="card-content">
+                        <h3>Issue Resolution</h3>
+                        <p>Troubleshoot and resolve security issues with guided playbooks and workflows</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user"></i> Curtis Lewis</span>
+                            <span><i class="fas fa-calendar"></i> Oct 31, 2025</span>
+                        </div>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="pages/playbooks.html" class="access-card">
+                    <div class="card-icon green"><i class="fas fa-book-open"></i></div>
+                    <div class="card-content">
+                        <h3>Playbooks, Decks & Videos</h3>
+                        <p>MCS playbooks, presentation decks, and training videos for security services</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user"></i> Purish Dwivedi</span>
+                            <span><i class="fas fa-calendar"></i> Dec 2, 2024</span>
+                        </div>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="pages/delivery.html" class="access-card">
+                    <div class="card-icon orange"><i class="fas fa-truck"></i></div>
+                    <div class="card-content">
+                        <h3>MCSfMSC Delivery</h3>
+                        <p>Service delivery resources, templates, and guidelines for customer engagements</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user"></i> Sherry Shao</span>
+                            <span><i class="fas fa-calendar"></i> Sep 28, 2025</span>
+                        </div>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+                <a href="pages/onboarding.html" class="access-card">
+                    <div class="card-icon gold"><i class="fas fa-user-plus"></i></div>
+                    <div class="card-content">
+                        <h3>MCSfMSC Onboarding</h3>
+                        <p>Customer onboarding materials, checklists, and setup guides</p>
+                        <div class="card-meta">
+                            <span><i class="fas fa-user"></i> Soumodipto Chatterjee</span>
+                            <span><i class="fas fa-calendar"></i> Feb 25, 2025</span>
+                        </div>
+                    </div>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Offerings -->
+    <section class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-shield-alt"></i> Security Service Offerings</h2>
+                <p>Comprehensive Mission Critical Services for Microsoft Security Cloud</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-shield-virus"></i></div>
+                    <h3>Microsoft Defender XDR</h3>
+                    <p>Extended detection and response across endpoints, identities, email, and cloud apps</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Threat detection & response</li>
+                        <li><i class="fas fa-check"></i> Automated investigation</li>
+                        <li><i class="fas fa-check"></i> Cross-domain correlation</li>
+                    </ul>
+                    <a href="pages/playbooks.html#defender-xdr" class="service-link">View Playbook →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-satellite-dish"></i></div>
+                    <h3>Microsoft Sentinel</h3>
+                    <p>Cloud-native SIEM with intelligent security analytics</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Log collection & analytics</li>
+                        <li><i class="fas fa-check"></i> Threat hunting</li>
+                        <li><i class="fas fa-check"></i> SOAR capabilities</li>
+                    </ul>
+                    <a href="pages/playbooks.html#sentinel" class="service-link">View Playbook →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-fingerprint"></i></div>
+                    <h3>Microsoft Entra ID</h3>
+                    <p>Identity and access management with advanced security</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Conditional Access</li>
+                        <li><i class="fas fa-check"></i> Identity Protection</li>
+                        <li><i class="fas fa-check"></i> Privileged Identity Mgmt</li>
+                    </ul>
+                    <a href="pages/playbooks.html#entra-id" class="service-link">View Playbook →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-cloud"></i></div>
+                    <h3>Defender for Cloud</h3>
+                    <p>Cloud security posture management and workload protection</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> CSPM</li>
+                        <li><i class="fas fa-check"></i> Workload protection</li>
+                        <li><i class="fas fa-check"></i> Regulatory compliance</li>
+                    </ul>
+                    <a href="pages/playbooks.html#defender-cloud" class="service-link">View Playbook →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-envelope-open-text"></i></div>
+                    <h3>Defender for Office 365</h3>
+                    <p>Email threat protection and collaboration security</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Anti-phishing</li>
+                        <li><i class="fas fa-check"></i> Safe Attachments</li>
+                        <li><i class="fas fa-check"></i> Threat investigation</li>
+                    </ul>
+                    <a href="pages/playbooks.html#defender-office" class="service-link">View Playbook →</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrap"><i class="fas fa-lock"></i></div>
+                    <h3>Microsoft Purview</h3>
+                    <p>Data governance, compliance, and information protection</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Data loss prevention</li>
+                        <li><i class="fas fa-check"></i> Information protection</li>
+                        <li><i class="fas fa-check"></i> Insider risk management</li>
+                    </ul>
+                    <a href="pages/playbooks.html#purview" class="service-link">View Playbook →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="announcements-section">
+        <div class="section-container">
+            <div class="section-header"><h2><i class="fas fa-bullhorn"></i> Announcements</h2></div>
+            <div class="announcement-list">
+                <div class="announcement-item">
+                    <div class="announcement-date">Feb 2025</div>
+                    <div class="announcement-content">
+                        <h4>MCSfMSC Onboarding Process Updated</h4>
+                        <p>The customer onboarding workflow has been streamlined. <a href="pages/onboarding.html">Review updated procedures →</a></p>
+                    </div>
+                    <span class="announcement-badge new">New</span>
+                </div>
+                <div class="announcement-item">
+                    <div class="announcement-date">Oct 2025</div>
+                    <div class="announcement-content">
+                        <h4>Issue Resolution Framework v2.0</h4>
+                        <p>New issue resolution playbooks with improved escalation paths. <a href="pages/issue-resolution.html">View now →</a></p>
+                    </div>
+                    <span class="announcement-badge updated">Updated</span>
+                </div>
+                <div class="announcement-item">
+                    <div class="announcement-date">Sep 2025</div>
+                    <div class="announcement-content">
+                        <h4>Delivery Templates Refreshed</h4>
+                        <p>All service delivery templates updated. <a href="pages/delivery.html">View templates →</a></p>
+                    </div>
+                    <span class="announcement-badge updated">Updated</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>MCSfMSC Portal</h4>
+                    <p>Mission Critical Services for Microsoft Security Cloud — your one-stop resource hub.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Portal Pages</h4>
+                    <ul>
+                        <li><a href="pages/issue-resolution.html">Issue Resolution</a></li>
+                        <li><a href="pages/playbooks.html">Playbooks & Videos</a></li>
+                        <li><a href="pages/delivery.html">MCSfMSC Delivery</a></li>
+                        <li><a href="pages/onboarding.html">Onboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>SharePoint Sources</h4>
+                    <ul>
+                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FIssue%20Resolution&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Issue Resolution</a></li>
+                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCS%20Playbooks%20Decks%20Videos&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Playbooks</a></li>
+                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCSfMSC%20Delivery&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Delivery</a></li>
+                        <li><a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx" target="_blank"><i class="fas fa-external-link-alt"></i> SED Onboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li>
+                        <li><a href="#"><i class="fas fa-comments"></i> Teams Channel</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Microsoft. Mission Critical Services for Microsoft Security Cloud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
+    <script src="js/main.js"></script>
+</body>
+</html>

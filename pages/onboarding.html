@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onboarding - MCSfMSC Portal</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-section">
+                    <img src="../assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo">
+                    <span class="nav-divider">|</span>
+                    <a href="../index.html" class="portal-title-link">MCSfMSC Portal</a>
+                </div>
+            </div>
+            <nav class="nav-center">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="issue-resolution.html" class="nav-link">Issue Resolution</a>
+                <a href="playbooks.html" class="nav-link">Playbooks & Videos</a>
+                <a href="delivery.html" class="nav-link">Delivery</a>
+                <a href="onboarding.html" class="nav-link active">Onboarding</a>
+            </nav>
+            <div class="nav-right"><div class="user-avatar"><i class="fas fa-user-circle"></i></div></div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero gold-theme">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i> MCSfMSC Onboarding</div>
+            <h1><i class="fas fa-user-plus"></i> MCSfMSC Onboarding</h1>
+            <p>Complete guide for onboarding new MCSfMSC customers — from initial request to active service delivery</p>
+            <div class="page-hero-meta">
+                <span><i class="fas fa-user"></i> Owner: Soumodipto Chatterjee</span>
+                <span><i class="fas fa-calendar"></i> Last Updated: February 25, 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Onboarding Flow -->
+    <section class="content-section" id="customer-onboarding-flow">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-route"></i> Customer Onboarding Flow</h2>
+                <p>Follow these steps to onboard a new MCSfMSC customer end-to-end</p>
+            </div>
+            <div class="onboarding-timeline">
+
+                <!-- Step 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h3>Step 1: Customer Request & Intake</h3>
+                        <p>A new MCSfMSC engagement is initiated when a customer request is received through the sales team or account team.</p>
+                        <div class="timeline-details">
+                            <h4>Actions Required:</h4>
+                            <ul>
+                                <li>Receive customer request via Account Team / CSAM</li>
+                                <li>Validate customer has appropriate licensing (M365 E5 Security, EMS E5, or standalone plans)</li>
+                                <li>Confirm MCSfMSC service SKU is included in the customer's contract</li>
+                                <li>Create engagement record in the tracking system</li>
+                                <li>Assign Service Delivery Manager (SDM)</li>
+                            </ul>
+                            <h4>Licensing Requirements:</h4>
+                            <table class="info-table">
+                                <thead>
+                                    <tr><th>Service</th><th>Required License</th></tr>
+                                </thead>
+                                <tbody>
+                                    <tr><td>Microsoft Defender XDR</td><td>M365 E5 / E5 Security / MDE P2</td></tr>
+                                    <tr><td>Microsoft Sentinel</td><td>Azure Subscription + Log Analytics</td></tr>
+                                    <tr><td>Microsoft Entra ID</td><td>Entra ID P2 / M365 E5</td></tr>
+                                    <tr><td>Defender for Cloud</td><td>Azure Subscription + Defender Plans</td></tr>
+                                    <tr><td>Defender for Office 365</td><td>M365 E5 / MDO P2</td></tr>
+                                    <tr><td>Microsoft Purview</td><td>M365 E5 Compliance / E5</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx" target="_blank" class="step-external-link">
+                            <i class="fas fa-external-link-alt"></i> SED Customer Onboarding Portal
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-item" id="customer-setup-checklist">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h3>Step 2: Customer Know Me — Setup Checklist</h3>
+                        <p>Gather essential customer information to prepare for the engagement. This is the "Customer Know Me" phase.</p>
+                        <div class="timeline-details">
+                            <h4>Customer Setup Checklist:</h4>
+                            <div class="checklist">
+                                <label class="checklist-item"><input type="checkbox"> <span>Customer organization name & tenant ID</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Primary & secondary contact information (name, email, phone)</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Customer's time zone and preferred communication hours</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Current Microsoft 365 / Azure licensing details</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Current security products in use (Microsoft & third-party)</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Number of users / devices / workloads in scope</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Current security pain points and priorities</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Regulatory / compliance requirements (HIPAA, PCI, GDPR, etc.)</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Existing SOC team structure and maturity level</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Preferred meeting cadence (weekly / bi-weekly)</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Approval process for production changes</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Environment details: Cloud (Azure/AWS/GCP), Hybrid, On-premises</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>NDA and data sharing agreement signed</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Guest access to customer's Teams tenant (if applicable)</span></label>
+                                <label class="checklist-item"><input type="checkbox"> <span>Azure Lighthouse delegation configured (if managing customer tenant)</span></label>
+                            </div>
+                        </div>
+                        <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx#6.-customer-setup-checklist" target="_blank" class="step-external-link">
+                            <i class="fas fa-external-link-alt"></i> Customer Setup Checklist on SharePoint
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h3>Step 3: Access Provisioning</h3>
+                        <p>Set up the necessary access permissions for the MCSfMSC team to support the customer.</p>
+                        <div class="timeline-details">
+                            <h4>Access Requirements:</h4>
+                            <ul>
+                                <li><strong>Azure Lighthouse:</strong> Configure delegated access for multi-tenant management</li>
+                                <li><strong>GDAP:</strong> Set up Granular Delegated Admin Privileges for partner access</li>
+                                <li><strong>Entra ID Roles:</strong> Security Reader, Security Operator (minimum required roles)</li>
+                                <li><strong>Sentinel Roles:</strong> Microsoft Sentinel Responder / Contributor</li>
+                                <li><strong>Defender Portal:</strong> Security Administrator role for configuration</li>
+                                <li><strong>Teams Access:</strong> Guest access to customer collaboration channels</li>
+                            </ul>
+                            <h4>Access Governance:</h4>
+                            <ul>
+                                <li>All access must follow least-privilege principle</li>
+                                <li>Use PIM for elevated access with time-bound activation</li>
+                                <li>Quarterly access reviews required</li>
+                                <li>Access must be revoked within 24 hours of engagement end</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h3>Step 4: Service Configuration</h3>
+                        <p>Configure the security services based on customer requirements and the engagement scope.</p>
+                        <div class="timeline-details">
+                            <h4>Configuration Activities:</h4>
+                            <ul>
+                                <li><strong>Sentinel Setup:</strong> Workspace creation, data connectors, analytics rules, automation playbooks</li>
+                                <li><strong>Defender XDR:</strong> Device onboarding, ASR rules, alert tuning, device groups</li>
+                                <li><strong>Entra ID Security:</strong> Conditional Access policies, Identity Protection, PIM configuration</li>
+                                <li><strong>Defender for Cloud:</strong> Enable plans, configure CSPM, set up alerts</li>
+                                <li><strong>MDO:</strong> Safe Links, Safe Attachments, anti-phishing policies</li>
+                                <li><strong>Purview:</strong> Sensitivity labels, DLP policies, insider risk</li>
+                            </ul>
+                        </div>
+                        <a href="playbooks.html" class="step-internal-link">
+                            <i class="fas fa-book-open"></i> View Configuration Playbooks
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h3>Step 5: Kickoff & Handoff to Delivery</h3>
+                        <p>Conduct the formal customer kickoff and transition from onboarding to ongoing delivery.</p>
+                        <div class="timeline-details">
+                            <h4>Kickoff Meeting Agenda:</h4>
+                            <ol>
+                                <li>Team introductions (MCSfMSC team ↔ Customer team)</li>
+                                <li>Engagement scope and objectives review</li>
+                                <li>Service delivery model explanation</li>
+                                <li>Communication plan (cadence, channels, escalation)</li>
+                                <li>Success criteria and KPI alignment</li>
+                                <li>Security posture baseline review</li>
+                                <li>First 30-day action plan</li>
+                                <li>Q&A</li>
+                            </ol>
+                            <h4>Handoff Deliverables:</h4>
+                            <ul>
+                                <li>Completed Customer Setup Checklist</li>
+                                <li>Access provisioning confirmation</li>
+                                <li>Initial service configuration summary</li>
+                                <li>Engagement project plan</li>
+                                <li>Communication matrix</li>
+                            </ul>
+                        </div>
+                        <a href="delivery.html" class="step-internal-link">
+                            <i class="fas fa-truck"></i> View Delivery Resources
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Engineer Onboarding -->
+    <section class="content-section alt-bg">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-chalkboard-teacher"></i> New Engineer Onboarding</h2>
+                <p>Getting started guide for engineers joining the MCSfMSC team</p>
+            </div>
+            <div class="engineer-onboarding">
+                <div class="eng-week">
+                    <h3><i class="fas fa-calendar-week"></i> Week 1: Orientation</h3>
+                    <ul>
+                        <li>Complete HR onboarding and compliance training</li>
+                        <li>Set up development environment and access permissions</li>
+                        <li>Review MCSfMSC Portal (this site!) and all documentation</li>
+                        <li>Meet with team lead and assigned buddy</li>
+                        <li>Shadow 2-3 customer calls with senior engineers</li>
+                        <li>Complete Microsoft Security certifications path review</li>
+                    </ul>
+                </div>
+                <div class="eng-week">
+                    <h3><i class="fas fa-calendar-week"></i> Week 2: Product Deep-Dives</h3>
+                    <ul>
+                        <li>Complete Microsoft Sentinel hands-on lab</li>
+                        <li>Complete Microsoft Defender XDR hands-on lab</li>
+                        <li>Review all <a href="playbooks.html">MCS Playbooks</a></li>
+                        <li>Study <a href="issue-resolution.html">Issue Resolution</a> processes and escalation paths</li>
+                        <li>Practice KQL queries in demo environment</li>
+                        <li>Review recent customer engagement case studies</li>
+                    </ul>
+                </div>
+                <div class="eng-week">
+                    <h3><i class="fas fa-calendar-week"></i> Week 3-4: Supervised Delivery</h3>
+                    <ul>
+                        <li>Co-lead customer calls with senior engineer oversight</li>
+                        <li>Perform first customer configuration task (supervised)</li>
+                        <li>Write first customer deliverable using <a href="delivery.html">delivery templates</a></li>
+                        <li>Complete customer onboarding simulation exercise</li>
+                        <li>Get sign-off from team lead for independent customer work</li>
+                        <li>Present 30-day learning summary to team</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Useful Resources -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-link"></i> Useful Resources & Links</h2>
+            </div>
+            <div class="tools-grid">
+                <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx" target="_blank" class="tool-card">
+                    <i class="fas fa-clipboard-check"></i>
+                    <h4>SED Customer Onboarding Portal</h4>
+                    <p>Full onboarding portal on SharePoint</p>
+                </a>
+                <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx#6.-customer-setup-checklist" target="_blank" class="tool-card">
+                    <i class="fas fa-list-check"></i>
+                    <h4>Customer Setup Checklist (SP)</h4>
+                    <p>SharePoint version of setup checklist</p>
+                </a>
+                <a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCSfMSC%20Onboarding&p=true" target="_blank" class="tool-card">
+                    <i class="fas fa-folder"></i>
+                    <h4>Onboarding Document Library</h4>
+                    <p>Full document library on SharePoint</p>
+                </a>
+                <a href="https://learn.microsoft.com/en-us/security/" target="_blank" class="tool-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Microsoft Security Docs</h4>
+                    <p>Official Microsoft Security documentation</p>
+                </a>
+                <a href="https://learn.microsoft.com/en-us/training/paths/sc-200/" target="_blank" class="tool-card">
+                    <i class="fas fa-certificate"></i>
+                    <h4>SC-200 Training Path</h4>
+                    <p>Security Operations Analyst certification</p>
+                </a>
+                <a href="https://security.microsoft.com" target="_blank" class="tool-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Microsoft 365 Defender Portal</h4>
+                    <p>Unified security operations portal</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>MCSfMSC Portal</h4><p>Mission Critical Services for Microsoft Security Cloud</p></div>
+                <div class="footer-col"><h4>Pages</h4><ul><li><a href="issue-resolution.html">Issue Resolution</a></li><li><a href="playbooks.html">Playbooks</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="onboarding.html">Onboarding</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Microsoft. MCSfMSC.</p></div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+</html>

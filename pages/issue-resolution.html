@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Issue Resolution - MCSfMSC Portal</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-section">
+                    <img src="../assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo">
+                    <span class="nav-divider">|</span>
+                    <a href="../index.html" class="portal-title-link">MCSfMSC Portal</a>
+                </div>
+            </div>
+            <nav class="nav-center">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="issue-resolution.html" class="nav-link active">Issue Resolution</a>
+                <a href="playbooks.html" class="nav-link">Playbooks & Videos</a>
+                <a href="delivery.html" class="nav-link">Delivery</a>
+                <a href="onboarding.html" class="nav-link">Onboarding</a>
+            </nav>
+            <div class="nav-right">
+                <div class="user-avatar"><i class="fas fa-user-circle"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero purple-theme">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i> Issue Resolution</div>
+            <h1><i class="fas fa-bug"></i> Issue Resolution</h1>
+            <p>Guided workflows, escalation paths, and resolution playbooks for Microsoft Security Cloud issues</p>
+            <div class="page-hero-meta">
+                <span><i class="fas fa-user"></i> Owner: Curtis Lewis</span>
+                <span><i class="fas fa-calendar"></i> Last Updated: October 31, 2025</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Severity Matrix -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> Severity Classification</h2>
+                <p>Classify issues by severity to determine the correct escalation path and SLA</p>
+            </div>
+            <div class="severity-grid">
+                <div class="severity-card sev-critical">
+                    <div class="sev-header">
+                        <span class="sev-badge">Sev 1</span>
+                        <h3>Critical</h3>
+                    </div>
+                    <p>Complete service outage or security breach impacting production</p>
+                    <div class="sev-details">
+                        <div class="sev-detail"><strong>Response Time:</strong> 15 minutes</div>
+                        <div class="sev-detail"><strong>Resolution Target:</strong> 4 hours</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Immediate to Sev 1 Manager</div>
+                        <div class="sev-detail"><strong>Communication:</strong> Every 30 minutes</div>
+                    </div>
+                    <h4>Examples:</h4>
+                    <ul>
+                        <li>Microsoft Sentinel completely down in production</li>
+                        <li>Active security breach detected</li>
+                        <li>All Defender alerts stopped processing</li>
+                        <li>Entra ID authentication outage</li>
+                        <li>Customer data exposure incident</li>
+                    </ul>
+                </div>
+                <div class="severity-card sev-high">
+                    <div class="sev-header">
+                        <span class="sev-badge">Sev 2</span>
+                        <h3>High</h3>
+                    </div>
+                    <p>Major functionality degraded, workaround may exist</p>
+                    <div class="sev-details">
+                        <div class="sev-detail"><strong>Response Time:</strong> 1 hour</div>
+                        <div class="sev-detail"><strong>Resolution Target:</strong> 8 hours</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Service Delivery Manager</div>
+                        <div class="sev-detail"><strong>Communication:</strong> Every 2 hours</div>
+                    </div>
+                    <h4>Examples:</h4>
+                    <ul>
+                        <li>Sentinel data ingestion delayed &gt; 1 hour</li>
+                        <li>Defender for Endpoint partial deployment failure</li>
+                        <li>Conditional Access policies not applying correctly</li>
+                        <li>DLP policies failing to trigger</li>
+                        <li>Multiple failed sign-in alerts not generated</li>
+                    </ul>
+                </div>
+                <div class="severity-card sev-medium">
+                    <div class="sev-header">
+                        <span class="sev-badge">Sev 3</span>
+                        <h3>Medium</h3>
+                    </div>
+                    <p>Non-critical functionality impaired, standard SLA</p>
+                    <div class="sev-details">
+                        <div class="sev-detail"><strong>Response Time:</strong> 4 hours</div>
+                        <div class="sev-detail"><strong>Resolution Target:</strong> 3 business days</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Support Engineer</div>
+                        <div class="sev-detail"><strong>Communication:</strong> Daily update</div>
+                    </div>
+                    <h4>Examples:</h4>
+                    <ul>
+                        <li>Dashboard widgets not loading correctly</li>
+                        <li>Minor configuration drift detected</li>
+                        <li>Report generation intermittently failing</li>
+                        <li>Non-critical alert rule needs tuning</li>
+                        <li>User provisioning delays</li>
+                    </ul>
+                </div>
+                <div class="severity-card sev-low">
+                    <div class="sev-header">
+                        <span class="sev-badge">Sev 4</span>
+                        <h3>Low</h3>
+                    </div>
+                    <p>Cosmetic issues, feature requests, general questions</p>
+                    <div class="sev-details">
+                        <div class="sev-detail"><strong>Response Time:</strong> 1 business day</div>
+                        <div class="sev-detail"><strong>Resolution Target:</strong> 5 business days</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Queue-based</div>
+                        <div class="sev-detail"><strong>Communication:</strong> As needed</div>
+                    </div>
+                    <h4>Examples:</h4>
+                    <ul>
+                        <li>Documentation update request</li>
+                        <li>Feature enhancement request</li>
+                        <li>Training or how-to questions</li>
+                        <li>Minor UI display issues</li>
+                        <li>Best practice guidance requests</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Escalation Path -->
+    <section class="content-section alt-bg">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-sitemap"></i> Escalation Path</h2>
+                <p>Follow the structured escalation process based on issue severity</p>
+            </div>
+            <div class="escalation-flow">
+                <div class="esc-step">
+                    <div class="esc-icon"><i class="fas fa-headset"></i></div>
+                    <h3>Level 1: Frontline Support</h3>
+                    <p>Initial triage and basic troubleshooting. Check known issues database, verify configurations.</p>
+                    <div class="esc-actions">
+                        <span class="esc-action">Triage</span>
+                        <span class="esc-action">Known Issues DB</span>
+                        <span class="esc-action">Basic Config Check</span>
+                    </div>
+                </div>
+                <div class="esc-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="esc-step">
+                    <div class="esc-icon"><i class="fas fa-user-cog"></i></div>
+                    <h3>Level 2: Service Delivery Engineer</h3>
+                    <p>Deep technical investigation. Log analysis, service health checks, configuration review.</p>
+                    <div class="esc-actions">
+                        <span class="esc-action">Log Analysis</span>
+                        <span class="esc-action">Service Health</span>
+                        <span class="esc-action">Config Deep-Dive</span>
+                    </div>
+                </div>
+                <div class="esc-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="esc-step">
+                    <div class="esc-icon"><i class="fas fa-users-cog"></i></div>
+                    <h3>Level 3: Product Engineering</h3>
+                    <p>Engagement with Microsoft product teams for product-level bugs or feature limitations.</p>
+                    <div class="esc-actions">
+                        <span class="esc-action">ICM/Bug Filing</span>
+                        <span class="esc-action">Product Team Sync</span>
+                        <span class="esc-action">Hotfix Request</span>
+                    </div>
+                </div>
+                <div class="esc-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="esc-step">
+                    <div class="esc-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Level 4: CxE / Security Leadership</h3>
+                    <p>Executive escalation for critical customer impact or cross-org coordination.</p>
+                    <div class="esc-actions">
+                        <span class="esc-action">Executive Bridge</span>
+                        <span class="esc-action">Cross-Org Sync</span>
+                        <span class="esc-action">CritSit Process</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Issue Categories -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-folder-open"></i> Common Issue Categories</h2>
+                <p>Browse common issues and their resolution guides by product area</p>
+            </div>
+            <div class="issue-categories">
+                <details class="issue-category" id="sentinel-issues">
+                    <summary>
+                        <i class="fas fa-satellite-dish"></i>
+                        <span>Microsoft Sentinel Issues</span>
+                        <span class="issue-count">12 articles</span>
+                    </summary>
+                    <div class="issue-list">
+                        <div class="issue-item">
+                            <h4>Data connector not ingesting logs</h4>
+                            <p><strong>Symptoms:</strong> Log data from Azure AD, Office 365, or third-party sources stops appearing in Sentinel.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Check data connector health status in Sentinel &gt; Data connectors</li>
+                                <li>Verify API permissions and credentials haven't expired</li>
+                                <li>Check Azure Monitor Agent (AMA) deployment status</li>
+                                <li>Review DCR (Data Collection Rules) for correct configuration</li>
+                                <li>Verify Log Analytics workspace hasn't reached capacity limits</li>
+                                <li>Check for any Azure service health advisories</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>Analytics rule not triggering alerts</h4>
+                            <p><strong>Symptoms:</strong> Scheduled or NRT analytics rules not generating incidents.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify the rule is enabled and check last run time</li>
+                                <li>Run the KQL query manually in Log Analytics to verify results</li>
+                                <li>Check query time range and entity mapping configuration</li>
+                                <li>Review alert threshold settings</li>
+                                <li>Ensure the data tables referenced in query are being populated</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>High data ingestion costs</h4>
+                            <p><strong>Symptoms:</strong> Unexpected cost increases in Log Analytics/Sentinel workspace.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Run usage analysis workbooks to identify top data sources</li>
+                                <li>Review basic/analytics log tiers for appropriate data classification</li>
+                                <li>Implement data transformation rules to reduce noise</li>
+                                <li>Configure data collection rules (DCR) to filter at source</li>
+                                <li>Consider commitment tiers for predictable pricing</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="issue-category" id="defender-issues">
+                    <summary>
+                        <i class="fas fa-shield-virus"></i>
+                        <span>Microsoft Defender XDR Issues</span>
+                        <span class="issue-count">10 articles</span>
+                    </summary>
+                    <div class="issue-list">
+                        <div class="issue-item">
+                            <h4>Defender for Endpoint onboarding failures</h4>
+                            <p><strong>Symptoms:</strong> Devices not appearing in MDE portal after onboarding package deployment.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify device meets minimum OS requirements</li>
+                                <li>Check network connectivity to MDE cloud service URLs</li>
+                                <li>Verify onboarding package is for the correct tenant and OS</li>
+                                <li>Check Windows Event Logs for onboarding errors (Event ID 47, 48)</li>
+                                <li>Run MDE Client Analyzer tool for comprehensive diagnostics</li>
+                                <li>Ensure no conflicting AV/EDR products are installed</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>Automated investigation stuck or failed</h4>
+                            <p><strong>Symptoms:</strong> AIR investigations not completing or showing errors.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Check the investigation graph for specific failed actions</li>
+                                <li>Verify automation level settings in device groups</li>
+                                <li>Ensure necessary permissions (Security Admin role)</li>
+                                <li>Check if device is reachable and responsive</li>
+                                <li>Review pending actions that require manual approval</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>Alert suppression not working</h4>
+                            <p><strong>Symptoms:</strong> Suppression rules not filtering known false positives.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify suppression rule scope (org-wide vs. device group)</li>
+                                <li>Check IOC conditions match exactly (case sensitivity)</li>
+                                <li>Review rule expiration date settings</li>
+                                <li>Ensure the alert title/detection source matches the rule filter</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="issue-category" id="entra-issues">
+                    <summary>
+                        <i class="fas fa-fingerprint"></i>
+                        <span>Microsoft Entra ID Issues</span>
+                        <span class="issue-count">8 articles</span>
+                    </summary>
+                    <div class="issue-list">
+                        <div class="issue-item">
+                            <h4>Conditional Access policies blocking legitimate users</h4>
+                            <p><strong>Symptoms:</strong> Users unable to sign in due to overly restrictive CA policies.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Use "What If" tool in Entra ID &gt; Conditional Access to simulate</li>
+                                <li>Check Sign-in logs for specific CA policy that blocked the user</li>
+                                <li>Review policy assignments (include/exclude groups)</li>
+                                <li>Verify named locations and trusted IP ranges</li>
+                                <li>Check for conflicting policies with different grant controls</li>
+                                <li>Use Report-only mode for testing before enforcement</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>PIM role activation failures</h4>
+                            <p><strong>Symptoms:</strong> Users unable to activate eligible roles through Privileged Identity Management.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify the user has an eligible role assignment (not expired)</li>
+                                <li>Check if MFA is required and user has registered MFA methods</li>
+                                <li>Review approval workflow — may need approver action</li>
+                                <li>Check maximum activation duration settings</li>
+                                <li>Verify no conflicting Conditional Access policies for PIM</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="issue-category" id="purview-issues">
+                    <summary>
+                        <i class="fas fa-lock"></i>
+                        <span>Microsoft Purview Issues</span>
+                        <span class="issue-count">6 articles</span>
+                    </summary>
+                    <div class="issue-list">
+                        <div class="issue-item">
+                            <h4>DLP policies not detecting sensitive data</h4>
+                            <p><strong>Symptoms:</strong> DLP policies failing to identify and protect sensitive information.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify policy is enabled and targeting correct locations (Exchange, SharePoint, OneDrive, Teams)</li>
+                                <li>Check sensitive information type (SIT) definitions and confidence levels</li>
+                                <li>Test with DLP policy test mode using sample data</li>
+                                <li>Ensure Unified Labeling client is installed on endpoints</li>
+                                <li>Review DLP activity explorer for policy match events</li>
+                                <li>Check if exact data match (EDM) tables are properly uploaded</li>
+                            </ol>
+                        </div>
+                        <div class="issue-item">
+                            <h4>Sensitivity labels not applying</h4>
+                            <p><strong>Symptoms:</strong> Auto-labeling or manual labeling not working in Office apps or SharePoint.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Verify label policy is published and scoped correctly</li>
+                                <li>Check Office app version supports built-in labeling</li>
+                                <li>Remove any legacy AIP add-in if present</li>
+                                <li>Allow 24h for label policy propagation</li>
+                                <li>Check Content Explorer for simulated label application</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="issue-category" id="mdo-issues">
+                    <summary>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <span>Defender for Office 365 Issues</span>
+                        <span class="issue-count">5 articles</span>
+                    </summary>
+                    <div class="issue-list">
+                        <div class="issue-item">
+                            <h4>Phishing emails bypassing Safe Links/Safe Attachments</h4>
+                            <p><strong>Symptoms:</strong> Users receiving phishing emails that were not caught by MDO.</p>
+                            <p><strong>Resolution Steps:</strong></p>
+                            <ol>
+                                <li>Check the email in Threat Explorer for delivery reason</li>
+                                <li>Review Safe Links/Safe Attachments policy scope</li>
+                                <li>Check for transport rules that may be bypassing scanning</li>
+                                <li>Verify no IP/sender overrides in allow lists</li>
+                                <li>Submit the email to Microsoft as a false negative</li>
+                                <li>Review and tighten anti-phishing policies</li>
+                            </ol>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Tools -->
+    <section class="content-section alt-bg">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-tools"></i> Diagnostic Tools & Links</h2>
+                <p>Quick access to diagnostic tools for troubleshooting</p>
+            </div>
+            <div class="tools-grid">
+                <a href="https://security.microsoft.com" target="_blank" class="tool-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Microsoft 365 Defender Portal</h4>
+                    <p>Unified security portal for XDR</p>
+                </a>
+                <a href="https://portal.azure.com/#blade/Microsoft_Azure_Security_Insights" target="_blank" class="tool-card">
+                    <i class="fas fa-satellite-dish"></i>
+                    <h4>Microsoft Sentinel</h4>
+                    <p>Azure Portal → Sentinel workspace</p>
+                </a>
+                <a href="https://entra.microsoft.com" target="_blank" class="tool-card">
+                    <i class="fas fa-fingerprint"></i>
+                    <h4>Microsoft Entra Admin Center</h4>
+                    <p>Identity and access management</p>
+                </a>
+                <a href="https://compliance.microsoft.com" target="_blank" class="tool-card">
+                    <i class="fas fa-lock"></i>
+                    <h4>Microsoft Purview Portal</h4>
+                    <p>Compliance and data protection</p>
+                </a>
+                <a href="https://status.cloud.microsoft" target="_blank" class="tool-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h4>Azure Service Health</h4>
+                    <p>Check current service status</p>
+                </a>
+                <a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FIssue%20Resolution&p=true" target="_blank" class="tool-card">
+                    <i class="fas fa-folder"></i>
+                    <h4>Issue Resolution SharePoint</h4>
+                    <p>Full document library on SharePoint</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>MCSfMSC Portal</h4><p>Mission Critical Services for Microsoft Security Cloud</p></div>
+                <div class="footer-col">
+                    <h4>Portal Pages</h4>
+                    <ul>
+                        <li><a href="issue-resolution.html">Issue Resolution</a></li>
+                        <li><a href="playbooks.html">Playbooks & Videos</a></li>
+                        <li><a href="delivery.html">Delivery</a></li>
+                        <li><a href="onboarding.html">Onboarding</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Microsoft. MCSfMSC.</p></div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+</html>

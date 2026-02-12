@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbooks, Decks & Videos - MCSfMSC Portal</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="top-nav">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo-section">
+                    <img src="../assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo">
+                    <span class="nav-divider">|</span>
+                    <a href="../index.html" class="portal-title-link">MCSfMSC Portal</a>
+                </div>
+            </div>
+            <nav class="nav-center">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="issue-resolution.html" class="nav-link">Issue Resolution</a>
+                <a href="playbooks.html" class="nav-link active">Playbooks & Videos</a>
+                <a href="delivery.html" class="nav-link">Delivery</a>
+                <a href="onboarding.html" class="nav-link">Onboarding</a>
+            </nav>
+            <div class="nav-right"><div class="user-avatar"><i class="fas fa-user-circle"></i></div></div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero green-theme">
+        <div class="page-hero-content">
+            <div class="breadcrumb"><a href="../index.html">Home</a> <i class="fas fa-chevron-right"></i> Playbooks, Decks & Videos</div>
+            <h1><i class="fas fa-book-open"></i> MCS Playbooks, Decks & Videos</h1>
+            <p>Comprehensive collection of playbooks, presentation materials, and training videos for Microsoft Security Cloud services</p>
+            <div class="page-hero-meta">
+                <span><i class="fas fa-user"></i> Owner: Purish Dwivedi</span>
+                <span><i class="fas fa-calendar"></i> Last Updated: December 2, 2024</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Tabs -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="resource-tabs">
+                <button class="tab-btn active" data-tab="all">All</button>
+                <button class="tab-btn" data-tab="playbooks">Playbooks</button>
+                <button class="tab-btn" data-tab="decks">Decks</button>
+                <button class="tab-btn" data-tab="videos">Videos</button>
+            </div>
+
+            <!-- Defender XDR -->
+            <div class="playbook-section" id="defender-xdr">
+                <h2 class="playbook-section-title"><i class="fas fa-shield-virus"></i> Microsoft Defender XDR</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>MDE Deployment & Configuration Playbook</h3>
+                        <p>End-to-end guide for deploying Microsoft Defender for Endpoint including onboarding, policy configuration, and validation.</p>
+                        <div class="playbook-topics">
+                            <span>Onboarding</span><span>Policy Config</span><span>ASR Rules</span><span>EDR</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Prerequisites & Planning</strong> — Licensing requirements (P1 vs P2), supported OS versions, network requirements</li>
+                                <li><strong>Onboarding Methods</strong> — Intune, SCCM, GPO, local script, VDI</li>
+                                <li><strong>Security Baseline Configuration</strong> — Attack Surface Reduction rules, Network Protection, Web Protection</li>
+                                <li><strong>EDR Configuration</strong> — Alert tuning, custom detections, device groups</li>
+                                <li><strong>Automated Investigation & Response</strong> — AIR setup, automation levels, approval workflows</li>
+                                <li><strong>Threat & Vulnerability Management</strong> — TVM dashboard, security recommendations, remediation tracking</li>
+                                <li><strong>Validation & Testing</strong> — EICAR test, simulation attacks, health check scripts</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="decks">
+                        <div class="playbook-type"><i class="fas fa-file-powerpoint"></i> Deck</div>
+                        <h3>Defender XDR Overview Presentation</h3>
+                        <p>Executive-level presentation covering Defender XDR capabilities, architecture, and value proposition for customers.</p>
+                        <div class="playbook-topics">
+                            <span>Executive</span><span>Architecture</span><span>ROI</span>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="videos">
+                        <div class="playbook-type"><i class="fas fa-video"></i> Video</div>
+                        <h3>MDE Onboarding Walkthrough</h3>
+                        <p>Step-by-step video walkthrough of onboarding devices to Microsoft Defender for Endpoint using Intune.</p>
+                        <div class="playbook-topics">
+                            <span>Onboarding</span><span>Intune</span><span>Walkthrough</span>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Defender for Identity Deployment Guide</h3>
+                        <p>Guide for deploying MDI sensors, configuring detection rules, and integrating with Defender XDR.</p>
+                        <div class="playbook-topics">
+                            <span>MDI</span><span>Sensors</span><span>LDAP</span><span>Detection</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Sensor Deployment</strong> — Domain controller sensors, standalone sensors, sizing</li>
+                                <li><strong>Directory Service Account</strong> — gMSA setup, permissions required</li>
+                                <li><strong>Detection Configuration</strong> — Lateral movement paths, reconnaissance detection</li>
+                                <li><strong>Integration</strong> — XDR integration, SIEM forwarding, alert suppression</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sentinel -->
+            <div class="playbook-section" id="sentinel">
+                <h2 class="playbook-section-title"><i class="fas fa-satellite-dish"></i> Microsoft Sentinel</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Sentinel Deployment & Optimization Playbook</h3>
+                        <p>Comprehensive guide for deploying Sentinel, connecting data sources, building analytics rules, and cost optimization.</p>
+                        <div class="playbook-topics">
+                            <span>Deployment</span><span>Data Connectors</span><span>Analytics</span><span>Cost</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Workspace Design</strong> — Single vs multi-workspace, multi-tenant (Azure Lighthouse), retention policies</li>
+                                <li><strong>Data Connectors</strong> — First-party (Azure AD, M365, MDC), third-party (CEF/Syslog, API), custom connectors</li>
+                                <li><strong>Analytics Rules</strong> — Scheduled rules, NRT rules, fusion rules, MITRE ATT&CK mapping</li>
+                                <li><strong>Automation (SOAR)</strong> — Playbook design, Logic Apps integration, automated response actions</li>
+                                <li><strong>Workbooks & Dashboards</strong> — Built-in workbooks, custom dashboards, SOC metrics</li>
+                                <li><strong>Cost Management</strong> — Ingestion analysis, basic vs analytics logs, commitment tiers, data transformation</li>
+                                <li><strong>Threat Hunting</strong> — Hunting queries, bookmarks, Livestream, notebooks</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Sentinel SOC Operations Playbook</h3>
+                        <p>Day-to-day SOC operations guide including incident response workflows, shift handoffs, and KPIs.</p>
+                        <div class="playbook-topics">
+                            <span>SOC</span><span>IR</span><span>Operations</span><span>KPIs</span>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="decks">
+                        <div class="playbook-type"><i class="fas fa-file-powerpoint"></i> Deck</div>
+                        <h3>Sentinel Architecture & Design Workshop</h3>
+                        <p>Workshop deck for designing Sentinel architecture including workspace topology, data flow, and governance.</p>
+                        <div class="playbook-topics">
+                            <span>Architecture</span><span>Workshop</span><span>Design</span>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="videos">
+                        <div class="playbook-type"><i class="fas fa-video"></i> Video</div>
+                        <h3>KQL for Threat Hunting</h3>
+                        <p>Training video on writing KQL queries for effective threat hunting in Sentinel.</p>
+                        <div class="playbook-topics">
+                            <span>KQL</span><span>Threat Hunting</span><span>Training</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entra ID -->
+            <div class="playbook-section" id="entra-id">
+                <h2 class="playbook-section-title"><i class="fas fa-fingerprint"></i> Microsoft Entra ID</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Entra ID Security Hardening Playbook</h3>
+                        <p>Comprehensive guide to securing Entra ID including Conditional Access, Identity Protection, and PIM.</p>
+                        <div class="playbook-topics">
+                            <span>Conditional Access</span><span>Identity Protection</span><span>PIM</span><span>Zero Trust</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Identity Security Posture Assessment</strong> — Secure Score review, baseline gaps</li>
+                                <li><strong>Conditional Access Policies</strong> — Named locations, device compliance, session controls, risk-based policies</li>
+                                <li><strong>Identity Protection</strong> — Risk policies (sign-in risk, user risk), risky users remediation</li>
+                                <li><strong>Privileged Identity Management</strong> — Eligible vs active roles, just-in-time access, access reviews</li>
+                                <li><strong>Authentication Methods</strong> — Passwordless (FIDO2, WHfB), MFA registration campaigns</li>
+                                <li><strong>External Identity</strong> — B2B collaboration, cross-tenant access settings</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="decks">
+                        <div class="playbook-type"><i class="fas fa-file-powerpoint"></i> Deck</div>
+                        <h3>Zero Trust Identity Workshop</h3>
+                        <p>Customer-facing workshop deck for Zero Trust identity architecture with Entra ID.</p>
+                        <div class="playbook-topics">
+                            <span>Zero Trust</span><span>Workshop</span><span>Customer-Facing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Defender for Cloud -->
+            <div class="playbook-section" id="defender-cloud">
+                <h2 class="playbook-section-title"><i class="fas fa-cloud"></i> Microsoft Defender for Cloud</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Defender for Cloud Deployment Playbook</h3>
+                        <p>Guide for enabling and configuring CSPM and CWP across Azure, AWS, and GCP environments.</p>
+                        <div class="playbook-topics">
+                            <span>CSPM</span><span>CWP</span><span>Multi-Cloud</span><span>Compliance</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>CSPM Configuration</strong> — Secure Score, security recommendations, governance rules</li>
+                                <li><strong>Cloud Workload Protection</strong> — Plans for Servers, Containers, Databases, App Service, Storage</li>
+                                <li><strong>Multi-Cloud Setup</strong> — AWS account onboarding, GCP project onboarding, CSPM connectors</li>
+                                <li><strong>Regulatory Compliance</strong> — Built-in standards (CIS, NIST, PCI), custom policies</li>
+                                <li><strong>DevSecOps</strong> — IaC scanning, CI/CD integration, container image scanning</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="videos">
+                        <div class="playbook-type"><i class="fas fa-video"></i> Video</div>
+                        <h3>MDC Multi-Cloud Configuration</h3>
+                        <p>Video walkthrough of connecting AWS and GCP environments to Defender for Cloud.</p>
+                        <div class="playbook-topics">
+                            <span>Multi-Cloud</span><span>AWS</span><span>GCP</span><span>Walkthrough</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Defender for Office 365 -->
+            <div class="playbook-section" id="defender-office">
+                <h2 class="playbook-section-title"><i class="fas fa-envelope-open-text"></i> Microsoft Defender for Office 365</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>MDO Configuration & Tuning Playbook</h3>
+                        <p>Guide for configuring Safe Links, Safe Attachments, anti-phishing policies, and threat investigation.</p>
+                        <div class="playbook-topics">
+                            <span>Safe Links</span><span>Anti-Phishing</span><span>Threat Explorer</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Preset Security Policies</strong> — Standard vs Strict protection, policy precedence</li>
+                                <li><strong>Anti-Phishing</strong> — Impersonation protection, mailbox intelligence, spoof settings</li>
+                                <li><strong>Safe Attachments</strong> — Dynamic Delivery mode, SharePoint/OneDrive/Teams protection</li>
+                                <li><strong>Safe Links</strong> — URL rewriting, time-of-click protection, do-not-rewrite lists</li>
+                                <li><strong>Threat Investigation</strong> — Threat Explorer, Real-Time detections, Threat Trackers</li>
+                                <li><strong>Attack Simulation Training</strong> — Phishing simulations, training assignments</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Purview -->
+            <div class="playbook-section" id="purview">
+                <h2 class="playbook-section-title"><i class="fas fa-lock"></i> Microsoft Purview</h2>
+                <div class="playbook-grid">
+                    <div class="playbook-card" data-category="playbooks">
+                        <div class="playbook-type"><i class="fas fa-book"></i> Playbook</div>
+                        <h3>Purview Information Protection Playbook</h3>
+                        <p>End-to-end guide for implementing sensitivity labels, DLP policies, and insider risk management.</p>
+                        <div class="playbook-topics">
+                            <span>DLP</span><span>Sensitivity Labels</span><span>Insider Risk</span><span>eDiscovery</span>
+                        </div>
+                        <div class="playbook-content">
+                            <h4>Key Sections:</h4>
+                            <ol>
+                                <li><strong>Sensitivity Labels</strong> — Label taxonomy design, auto-labeling, container labels</li>
+                                <li><strong>Data Loss Prevention</strong> — DLP policy creation, SIT configuration, endpoint DLP</li>
+                                <li><strong>Insider Risk Management</strong> — Policy templates, indicators, investigation workflows</li>
+                                <li><strong>Information Barriers</strong> — Segment definitions, policy configuration</li>
+                                <li><strong>eDiscovery & Audit</strong> — Content search, review sets, audit log retention</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="playbook-card" data-category="decks">
+                        <div class="playbook-type"><i class="fas fa-file-powerpoint"></i> Deck</div>
+                        <h3>Data Protection Strategy Workshop</h3>
+                        <p>Workshop deck for designing a comprehensive data protection strategy with Purview.</p>
+                        <div class="playbook-topics">
+                            <span>Strategy</span><span>Workshop</span><span>Data Protection</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- External Link -->
+    <section class="content-section alt-bg">
+        <div class="section-container" style="text-align: center;">
+            <a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCS%20Playbooks%20Decks%20Videos&p=true" target="_blank" class="btn btn-primary" style="background: var(--ms-green); color: white;">
+                <i class="fas fa-external-link-alt"></i> Open Full Library on SharePoint
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col"><h4>MCSfMSC Portal</h4><p>Mission Critical Services for Microsoft Security Cloud</p></div>
+                <div class="footer-col"><h4>Pages</h4><ul><li><a href="issue-resolution.html">Issue Resolution</a></li><li><a href="playbooks.html">Playbooks</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="onboarding.html">Onboarding</a></li></ul></div>
+                <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 Microsoft. MCSfMSC.</p></div>
+        </div>
+    </footer>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
+    <script src="../js/main.js"></script>
+</body>
+</html>
