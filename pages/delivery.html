@@ -6,6 +6,43 @@
     <title>MCSfMSC Delivery - MCSfMSC Portal</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Capabilities Diagram */
+        .capabilities-section { padding: 60px 0; }
+        .capabilities-diagram { display: flex; justify-content: center; align-items: center; gap: 0; flex-wrap: wrap; margin: 40px auto; max-width: 900px; position: relative; }
+        .capability-pillar { position: relative; width: 260px; text-align: center; }
+        .capability-circle { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--ms-blue); display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 20px; background: linear-gradient(135deg, rgba(0,120,212,0.05), rgba(0,120,212,0.12)); transition: transform 0.3s, box-shadow 0.3s; }
+        .capability-circle:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(0,120,212,0.2); }
+        .capability-circle i { font-size: 32px; color: var(--ms-blue); margin-bottom: 8px; }
+        .capability-circle h3 { font-size: 15px; font-weight: 700; color: var(--neutral-900); margin: 0; line-height: 1.3; }
+        .capability-points { text-align: left; padding: 0 8px; }
+        .capability-points .cap-point { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--neutral-100); font-size: 13px; color: var(--neutral-700); line-height: 1.5; }
+        .capability-points .cap-point:last-child { border-bottom: none; }
+        .capability-points .cap-point i { color: var(--ms-blue); margin-top: 4px; flex-shrink: 0; font-size: 10px; }
+        .capability-points .cap-point strong { color: var(--ms-blue); font-weight: 600; }
+        .capability-arrows { display: flex; align-items: center; justify-content: center; font-size: 28px; color: var(--ms-blue); margin: 0 -15px; z-index: 1; }
+        .cap-arrow-container { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+        .cap-arrow-container i { font-size: 22px; color: var(--ms-blue); opacity: 0.6; }
+
+        /* Support Portals */
+        .portal-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .portal-table th { background: var(--ms-blue); color: white; padding: 14px 16px; text-align: left; font-size: 13px; font-weight: 600; }
+        .portal-table td { padding: 12px 16px; border-bottom: 1px solid var(--neutral-100); font-size: 13px; color: var(--neutral-700); }
+        .portal-table tr:hover td { background: var(--neutral-50); }
+        .portal-table a { color: var(--ms-blue); text-decoration: none; font-weight: 500; }
+        .portal-table a:hover { text-decoration: underline; }
+        .portal-segment { background: var(--neutral-white); border: 1px solid var(--neutral-100); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px; }
+        .portal-segment h4 { font-size: 16px; font-weight: 600; color: var(--neutral-900); margin-bottom: 6px; }
+        .portal-segment .segment-badge { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 600; color: white; margin-bottom: 12px; }
+        .portal-segment .segment-badge.azure { background: var(--ms-blue); }
+        .portal-segment .segment-badge.m365 { background: var(--ms-purple); }
+        .portal-segment p.portal-note { font-size: 12px; color: var(--neutral-500); font-style: italic; margin-top: 12px; }
+
+        @media (max-width: 900px) {
+            .capabilities-diagram { flex-direction: column; align-items: center; gap: 30px; }
+            .capability-arrows { transform: rotate(90deg); margin: -10px 0; }
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -39,8 +76,106 @@
             <p>Service delivery resources, templates, operational guidelines, and engagement management for customer engagements</p>
             <div class="page-hero-meta">
                 <span><i class="fas fa-user"></i> Owner: Marlene Shaup</span>
-                <span><i class="fas fa-calendar"></i> Last Updated: September 28, 2025</span>
+                <span><i class="fas fa-calendar"></i> Last Updated: February 12, 2026</span>
             </div>
+        </div>
+    </section>
+
+    <!-- MCSfMSC Capabilities -->
+    <section class="content-section capabilities-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-shield-alt"></i> Mission Critical for Microsoft Security Cloud Capabilities</h2>
+                <p>Three pillars that define the MCSfMSC service delivery experience for our customers</p>
+            </div>
+            <div class="capabilities-diagram">
+                <!-- Technical Engagement -->
+                <div class="capability-pillar">
+                    <div class="capability-circle">
+                        <i class="fas fa-headset"></i>
+                        <h3>Technical<br>Engagement</h3>
+                    </div>
+                    <div class="capability-points">
+                        <div class="cap-point"><i class="fas fa-circle"></i><span>Assigned Microsoft <strong>Security Engineering Customer Lead</strong> who advocates within Security Engineering and across Microsoft to represent the customer interests</span></div>
+                        <div class="cap-point"><i class="fas fa-circle"></i><span><strong>Understanding of your security products and environment</strong> with extensive knowledge of the Microsoft Security portfolio</span></div>
+                    </div>
+                </div>
+
+                <div class="capability-arrows">
+                    <div class="cap-arrow-container">
+                        <i class="fas fa-arrow-right"></i>
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </div>
+
+                <!-- Reliability -->
+                <div class="capability-pillar">
+                    <div class="capability-circle">
+                        <i class="fas fa-handshake"></i>
+                        <h3>Reliability</h3>
+                    </div>
+                    <div class="capability-points">
+                        <div class="cap-point"><i class="fas fa-circle"></i><span>Security <strong>engineering enhanced awareness and readiness</strong> during changes, critical projects, and major events to remove technical blockers, enabling quicker issue mitigation</span></div>
+                        <div class="cap-point"><i class="fas fa-circle"></i><span>Insights from the <strong>Security engineering roadmap</strong> to proactively prepare for upcoming changes and leverage those insights for strategic planning</span></div>
+                    </div>
+                </div>
+
+                <div class="capability-arrows">
+                    <div class="cap-arrow-container">
+                        <i class="fas fa-arrow-right"></i>
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                </div>
+
+                <!-- Accelerated Resolution -->
+                <div class="capability-pillar">
+                    <div class="capability-circle">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Accelerated<br>Resolution</h3>
+                    </div>
+                    <div class="capability-points">
+                        <div class="cap-point"><i class="fas fa-circle"></i><span><strong>15-min Sev 1/A, and expert response</strong> by an advanced Microsoft Security support engineer on all support issue severities</span></div>
+                        <div class="cap-point"><i class="fas fa-circle"></i><span><strong>Engineering-led crisis management</strong> with experts that provide up-to-date communication on the incident mitigation</span></div>
+                        <div class="cap-point"><i class="fas fa-circle"></i><span>Ability to <strong>self-escalate directly to Security Engineering</strong> for Sev 1/A issues to receive the highest level of prioritization from the Microsoft Security engineering and feature teams</span></div>
+                        <div class="cap-point"><i class="fas fa-circle"></i><span>Comprehensive <strong>Root Cause Analysis</strong> of the customer critical issue when requested within 10 business days of the request and create targeted improvements to prevent future issues and enhance your security product use</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Case Creation Portals -->
+    <section class="content-section alt-bg">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-ticket-alt"></i> Support Case Creation Portals</h2>
+                <p>Where MCS customers create support requests across Microsoft portals</p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-bottom: 24px;">
+                <div class="portal-segment">
+                    <span class="segment-badge azure">Azure Portal</span>
+                    <h4>Azure &amp; Microsoft Entra Portals (Ibiza)</h4>
+                    <p style="font-size:13px; color:var(--neutral-600); margin-bottom:12px;">Used for managing Microsoft Entra–related products and services.</p>
+                    <table class="portal-table">
+                        <tr><th>Portal</th><th>URL</th></tr>
+                        <tr><td>Azure Portal</td><td><a href="https://portal.azure.com" target="_blank">portal.azure.com</a></td></tr>
+                        <tr><td>Entra Admin Center</td><td><a href="https://entra.microsoft.com" target="_blank">entra.microsoft.com</a></td></tr>
+                    </table>
+                </div>
+                <div class="portal-segment">
+                    <span class="segment-badge m365">M365 / Support Central</span>
+                    <h4>Microsoft Admin Center (MAC) / Support Central</h4>
+                    <p style="font-size:13px; color:var(--neutral-600); margin-bottom:12px;">Used for M365 and security-classified products, such as MTP, Intune, Purview, Sentinel &amp; Security Copilot.</p>
+                    <table class="portal-table">
+                        <tr><th>Portal</th><th>URL</th></tr>
+                        <tr><td>Microsoft Admin Center (MAC)</td><td><a href="https://admin.microsoft.com" target="_blank">admin.microsoft.com</a></td></tr>
+                        <tr><td>Intune Admin Center</td><td><a href="https://intune.microsoft.com" target="_blank">intune.microsoft.com</a></td></tr>
+                        <tr><td>Microsoft Purview Portal</td><td><a href="https://purview.microsoft.com" target="_blank">purview.microsoft.com</a></td></tr>
+                        <tr><td>Microsoft Security Portal</td><td><a href="https://security.microsoft.com" target="_blank">security.microsoft.com</a></td></tr>
+                    </table>
+                </div>
+            </div>
+            <p class="portal-note" style="font-size:12px; color:var(--neutral-500); font-style:italic; text-align:center;"><i class="fas fa-info-circle"></i> Note: These two portal segments provide different user experiences while creating support requests (SR#). Entitlement mapping differs between Azure (subscription-based) and M365 (tenant-based).</p>
         </div>
     </section>
 
@@ -49,7 +184,7 @@
         <div class="section-container">
             <div class="section-header">
                 <h2><i class="fas fa-project-diagram"></i> Engagement Lifecycle</h2>
-                <p>Standard MCSfMSC service delivery lifecycle from kickoff to close</p>
+                <p>Standard MCSfMSC service delivery lifecycle from kickoff to steady state</p>
             </div>
             <div class="lifecycle-flow">
                 <div class="lifecycle-step">
@@ -57,7 +192,7 @@
                     <h3>Kickoff</h3>
                     <ul>
                         <li>Customer introduction meeting</li>
-                        <li>Scope & objectives alignment</li>
+                        <li>Scope &amp; objectives alignment</li>
                         <li>Stakeholder identification</li>
                         <li>Communication cadence setup</li>
                         <li>Success criteria definition</li>
@@ -80,11 +215,11 @@
                     <div class="lifecycle-num">3</div>
                     <h3>Implementation</h3>
                     <ul>
-                        <li>Solution design & architecture</li>
-                        <li>Configuration & deployment</li>
+                        <li>Solution design &amp; architecture</li>
+                        <li>Configuration &amp; deployment</li>
                         <li>Policy implementation</li>
                         <li>Integration setup</li>
-                        <li>Testing & validation</li>
+                        <li>Testing &amp; validation</li>
                     </ul>
                 </div>
                 <div class="lifecycle-arrow"><i class="fas fa-chevron-right"></i></div>
@@ -92,7 +227,7 @@
                     <div class="lifecycle-num">4</div>
                     <h3>Optimization</h3>
                     <ul>
-                        <li>Alert tuning & noise reduction</li>
+                        <li>Alert tuning &amp; noise reduction</li>
                         <li>Performance optimization</li>
                         <li>Advanced configuration</li>
                         <li>Custom detection rules</li>
@@ -104,7 +239,7 @@
                     <div class="lifecycle-num">5</div>
                     <h3>Steady State</h3>
                     <ul>
-                        <li>Ongoing monitoring & support</li>
+                        <li>Ongoing monitoring &amp; support</li>
                         <li>Monthly service reviews</li>
                         <li>Quarterly business reviews</li>
                         <li>Health checks</li>
@@ -115,11 +250,58 @@
         </div>
     </section>
 
-    <!-- Templates & Documents -->
+    <!-- Delivery KPIs -->
     <section class="content-section alt-bg">
         <div class="section-container">
             <div class="section-header">
-                <h2><i class="fas fa-file-alt"></i> Delivery Templates & Documents</h2>
+                <h2><i class="fas fa-tachometer-alt"></i> Delivery KPIs &amp; Metrics</h2>
+                <p>Standard metrics tracked for MCSfMSC service delivery engagements</p>
+            </div>
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Initial Response Time (IRT)</h3>
+                    <p>1st call response time from case creation, per MCSfMSC severity classification.</p>
+                    <div class="kpi-targets">
+                        <div>Sev 1: <strong>15 min</strong></div>
+                        <div>Sev A: <strong>15 min</strong></div>
+                        <div>Sev B: <strong>2 hours</strong></div>
+                        <div>Sev C: <strong>4 hours</strong></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Secure Score Improvement</h3>
+                    <p>Customer's Microsoft Secure Score improvement over the engagement period.</p>
+                    <div class="kpi-targets">
+                        <div>Target: <strong>+15% in 90 days</strong></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-file-alt"></i></div>
+                    <h3>Root Cause Analysis (RCA)</h3>
+                    <p>Comprehensive RCA delivered when customer explicitly requests within the defined window.</p>
+                    <div class="kpi-targets">
+                        <div>SLA: <strong>10 business days</strong></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-icon"><i class="fas fa-smile"></i></div>
+                    <h3>Customer Satisfaction (CSAT)</h3>
+                    <p>Customer satisfaction rating collected after each milestone and at QBR.</p>
+                    <div class="kpi-targets">
+                        <div>Target: <strong>&ge; 4.5 / 5.0</strong></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Templates & Documents -->
+    <section class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2><i class="fas fa-file-alt"></i> Delivery Templates &amp; Documents</h2>
                 <p>Standard templates for all phases of MCSfMSC service delivery</p>
             </div>
             <div class="template-grid">
@@ -199,54 +381,6 @@
         </div>
     </section>
 
-    <!-- Key Metrics -->
-    <section class="content-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2><i class="fas fa-tachometer-alt"></i> Delivery KPIs & Metrics</h2>
-                <p>Standard metrics tracked for MCSfMSC service delivery engagements</p>
-            </div>
-            <div class="kpi-grid">
-                <div class="kpi-card">
-                    <div class="kpi-icon"><i class="fas fa-clock"></i></div>
-                    <h3>Mean Time to Respond (MTTR)</h3>
-                    <p>Average time from issue report to initial response. Target varies by severity level.</p>
-                    <div class="kpi-targets">
-                        <div>Sev 1: <strong>15 min</strong></div>
-                        <div>Sev 2: <strong>1 hour</strong></div>
-                        <div>Sev 3: <strong>4 hours</strong></div>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-icon"><i class="fas fa-wrench"></i></div>
-                    <h3>Mean Time to Resolve (MTTRes)</h3>
-                    <p>Average time from issue report to complete resolution.</p>
-                    <div class="kpi-targets">
-                        <div>Sev 1: <strong>4 hours</strong></div>
-                        <div>Sev 2: <strong>8 hours</strong></div>
-                        <div>Sev 3: <strong>3 days</strong></div>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Secure Score Improvement</h3>
-                    <p>Customer's Microsoft Secure Score improvement over the engagement period.</p>
-                    <div class="kpi-targets">
-                        <div>Target: <strong>+15% in 90 days</strong></div>
-                    </div>
-                </div>
-                <div class="kpi-card">
-                    <div class="kpi-icon"><i class="fas fa-smile"></i></div>
-                    <h3>Customer Satisfaction (CSAT)</h3>
-                    <p>Customer satisfaction rating collected after each milestone and at QBR.</p>
-                    <div class="kpi-targets">
-                        <div>Target: <strong>≥ 4.5 / 5.0</strong></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Operational Guidelines -->
     <section class="content-section alt-bg">
         <div class="section-container">
@@ -268,7 +402,7 @@
                     </div>
                 </details>
                 <details class="guideline-item">
-                    <summary><i class="fas fa-shield-alt"></i> Security & Compliance</summary>
+                    <summary><i class="fas fa-shield-alt"></i> Security &amp; Compliance</summary>
                     <div class="guideline-content">
                         <ul>
                             <li><strong>Data Handling:</strong> Never store customer data on personal devices or unauthorized locations</li>
@@ -309,10 +443,10 @@
         <div class="footer-container">
             <div class="footer-grid">
                 <div class="footer-col"><h4>MCSfMSC Portal</h4><p>Mission Critical Services for Microsoft Security Cloud</p></div>
-                <div class="footer-col"><h4>Pages</h4><ul><li><a href="issue-resolution.html">Issue Resolution</a></li><li><a href="playbooks.html">Playbooks</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="onboarding.html">Onboarding</a></li></ul></div>
+                <div class="footer-col"><h4>Pages</h4><ul><li><a href="issue-resolution.html">Issue Resolution</a></li><li><a href="playbooks.html">Playbooks &amp; Videos</a></li><li><a href="delivery.html">Delivery</a></li><li><a href="onboarding.html">Onboarding</a></li><li><a href="resources.html">Resources</a></li></ul></div>
                 <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li></ul></div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 Microsoft. MCSfMSC.</p></div>
+            <div class="footer-bottom"><p>&copy; 2026 Microsoft. MCSfMSC.</p></div>
         </div>
     </footer>
     <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
