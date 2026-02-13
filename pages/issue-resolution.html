@@ -53,89 +53,82 @@
                 <h2><i class="fas fa-exclamation-triangle"></i> Severity Classification</h2>
                 <p>Classify issues by severity to determine the correct escalation path and SLA</p>
             </div>
-            <div class="severity-grid">
+                        <div class="severity-grid">
                 <div class="severity-card sev-critical">
                     <div class="sev-header">
                         <span class="sev-badge">Sev 1</span>
-                        <h3>Critical</h3>
+                        <h3>Catastrophic Business Impact</h3>
                     </div>
-                    <p>Complete service outage or security breach impacting production</p>
+                    <p>Complete loss of the mission critical business process. Service halted or cannot continue. Needs immediate attention.</p>
                     <div class="sev-details">
-                        <div class="sev-detail"><strong>Response Time:</strong> 15 minutes</div>
-                        <div class="sev-detail"><strong>Resolution Target:</strong> 4 hours</div>
-                        <div class="sev-detail"><strong>Escalation:</strong> Immediate to Sev 1 Manager</div>
-                        <div class="sev-detail"><strong>Communication:</strong> Every 30 minutes</div>
+                        <div class="sev-detail"><strong>Response Time:</strong> 1st call response in 15 minutes</div>
+                        <div class="sev-detail"><strong>Engineering:</strong> Customer Lead Engineer Engaged</div>
+                        <div class="sev-detail"><strong>Effort:</strong> 24x7 continuous effort</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Engineering led crisis management</div>
                     </div>
-                    <h4>Examples:</h4>
+                    <h4>Customer Responsibility:</h4>
                     <ul>
-                        <li>Microsoft Sentinel completely down in production</li>
-                        <li>Active security breach detected</li>
-                        <li>All Defender alerts stopped processing</li>
-                        <li>Entra ID authentication outage</li>
-                        <li>Customer data exposure incident</li>
+                        <li>Use Direct Connect Escalation</li>
+                        <li>Notification of senior executives</li>
+                        <li>Allocation of appropriate resources</li>
+                        <li>24x7 continuous effort</li>
+                        <li>Rapid access &amp; response from change control authority</li>
                     </ul>
                 </div>
                 <div class="severity-card sev-high">
                     <div class="sev-header">
-                        <span class="sev-badge">Sev 2</span>
-                        <h3>High</h3>
+                        <span class="sev-badge">Sev A</span>
+                        <h3>Critical Business Impact</h3>
                     </div>
-                    <p>Major functionality degraded, workaround may exist</p>
+                    <p>Significant loss or degradation of mission critical business process. Service cannot reasonably continue. Needs urgent attention.</p>
                     <div class="sev-details">
-                        <div class="sev-detail"><strong>Response Time:</strong> 1 hour</div>
-                        <div class="sev-detail"><strong>Resolution Target:</strong> 8 hours</div>
-                        <div class="sev-detail"><strong>Escalation:</strong> Service Delivery Manager</div>
-                        <div class="sev-detail"><strong>Communication:</strong> Every 2 hours</div>
+                        <div class="sev-detail"><strong>Response Time:</strong> 1st call response in 15 minutes</div>
+                        <div class="sev-detail"><strong>Engineering:</strong> Customer Lead Engineer Engaged</div>
+                        <div class="sev-detail"><strong>Effort:</strong> 24x7 continuous effort</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Engineering led crisis management</div>
                     </div>
-                    <h4>Examples:</h4>
+                    <h4>Customer Responsibility:</h4>
                     <ul>
-                        <li>Sentinel data ingestion delayed &gt; 1 hour</li>
-                        <li>Defender for Endpoint partial deployment failure</li>
-                        <li>Conditional Access policies not applying correctly</li>
-                        <li>DLP policies failing to trigger</li>
-                        <li>Multiple failed sign-in alerts not generated</li>
+                        <li>Use Direct Connect Escalation</li>
+                        <li>Management notification</li>
+                        <li>Allocation of appropriate resources</li>
+                        <li>24x7 continuous effort</li>
+                        <li>Rapid access &amp; response from change control authority</li>
                     </ul>
                 </div>
                 <div class="severity-card sev-medium">
                     <div class="sev-header">
-                        <span class="sev-badge">Sev 3</span>
-                        <h3>Medium</h3>
+                        <span class="sev-badge">Sev B</span>
+                        <h3>Moderate Business Impact</h3>
                     </div>
-                    <p>Non-critical functionality impaired, standard SLA</p>
+                    <p>Moderate loss or degradation of mission critical business process. Service can reasonably continue in an impaired manner.</p>
                     <div class="sev-details">
-                        <div class="sev-detail"><strong>Response Time:</strong> 4 hours</div>
-                        <div class="sev-detail"><strong>Resolution Target:</strong> 3 business days</div>
-                        <div class="sev-detail"><strong>Escalation:</strong> Support Engineer</div>
-                        <div class="sev-detail"><strong>Communication:</strong> Daily update</div>
+                        <div class="sev-detail"><strong>Response Time:</strong> 1st call response within 2 hours</div>
+                        <div class="sev-detail"><strong>Resources:</strong> Allocation of appropriate resources</div>
+                        <div class="sev-detail"><strong>Escalation:</strong> Rapid access &amp; response from change control authority</div>
                     </div>
-                    <h4>Examples:</h4>
+                    <h4>Customer Responsibility:</h4>
                     <ul>
-                        <li>Dashboard widgets not loading correctly</li>
-                        <li>Minor configuration drift detected</li>
-                        <li>Report generation intermittently failing</li>
-                        <li>Non-critical alert rule needs tuning</li>
-                        <li>User provisioning delays</li>
+                        <li>Allocation of appropriate resources</li>
+                        <li>Rapid access &amp; response from change control authority</li>
                     </ul>
                 </div>
                 <div class="severity-card sev-low">
                     <div class="sev-header">
-                        <span class="sev-badge">Sev 4</span>
-                        <h3>Low</h3>
+                        <span class="sev-badge">Sev C</span>
+                        <h3>Minimum Business Impact</h3>
                     </div>
-                    <p>Cosmetic issues, feature requests, general questions</p>
+                    <p>Minor or no loss of mission critical business process. Service can continue with minor or no impediments.</p>
                     <div class="sev-details">
-                        <div class="sev-detail"><strong>Response Time:</strong> 1 business day</div>
-                        <div class="sev-detail"><strong>Resolution Target:</strong> 5 business days</div>
-                        <div class="sev-detail"><strong>Escalation:</strong> Queue-based</div>
-                        <div class="sev-detail"><strong>Communication:</strong> As needed</div>
+                        <div class="sev-detail"><strong>Response Time:</strong> 1st call response within 4 hours</div>
+                        <div class="sev-detail"><strong>Effort:</strong> Effort during business hours only</div>
+                        <div class="sev-detail"><strong>Resources:</strong> Allocation of appropriate resources</div>
+                        <div class="sev-detail"><strong>Resolution:</strong> Response within 24 hours</div>
                     </div>
-                    <h4>Examples:</h4>
+                    <h4>Customer Responsibility:</h4>
                     <ul>
-                        <li>Documentation update request</li>
-                        <li>Feature enhancement request</li>
-                        <li>Training or how-to questions</li>
-                        <li>Minor UI display issues</li>
-                        <li>Best practice guidance requests</li>
+                        <li>Allocation of appropriate resources</li>
+                        <li>Response within 24 hours</li>
                     </ul>
                 </div>
             </div>
