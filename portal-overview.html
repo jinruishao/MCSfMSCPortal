@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCSfMSC Portal — Executive Overview</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root { --blue: #0078d4; --dark: #1b1b1f; --gray: #605e5c; --light: #faf9f8; --green: #107c10; --orange: #d83b01; --purple: #5c2d91; --red: #e81123; --teal: #008272; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Segoe UI', -apple-system, sans-serif; background: white; color: var(--dark); }
+        .page { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+        /* Header */
+        .header { background: linear-gradient(135deg, #0078d4, #005a9e); color: white; padding: 32px 0; text-align: center; }
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; }
+        .header p { font-size: 14px; opacity: 0.85; }
+        .header .badge { display: inline-block; margin-top: 12px; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.5px; }
+
+        /* Section */
+        .section { padding: 24px 0 16px; }
+        .section-title { font-size: 16px; font-weight: 700; color: var(--blue); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; border-bottom: 2px solid var(--blue); padding-bottom: 8px; }
+
+        /* Architecture Diagram */
+        .arch-container { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .arch-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; width: 100%; }
+        .arch-box { border-radius: 10px; padding: 14px 16px; text-align: center; flex: 1; min-width: 130px; max-width: 180px; transition: transform 0.2s; cursor: default; }
+        .arch-box:hover { transform: translateY(-2px); }
+        .arch-box i { font-size: 20px; margin-bottom: 6px; display: block; }
+        .arch-box h4 { font-size: 11px; font-weight: 700; margin-bottom: 2px; }
+        .arch-box p { font-size: 9px; opacity: 0.7; line-height: 1.3; }
+        .arch-box.home { background: linear-gradient(135deg, #e8f0fe, #d2e3fc); color: #1a73e8; border: 1px solid #aecbfa; }
+        .arch-box.ir { background: linear-gradient(135deg, #fce8e6, #f8d7da); color: #c5221f; border: 1px solid #f5c6cb; }
+        .arch-box.pb { background: linear-gradient(135deg, #e6f4ea, #d4edda); color: #137333; border: 1px solid #b7e1cd; }
+        .arch-box.dv { background: linear-gradient(135deg, #fff3e0, #ffecd2); color: #bf360c; border: 1px solid #ffcc80; }
+        .arch-box.ob { background: linear-gradient(135deg, #ede7f6, #e1d5f0); color: #5c2d91; border: 1px solid #ce93d8; }
+        .arch-box.tr { background: linear-gradient(135deg, #e0f2f1, #d1ece9); color: #00695c; border: 1px solid #80cbc4; }
+        .arch-box.rs { background: linear-gradient(135deg, #e3f2fd, #d1e8ff); color: #0d47a1; border: 1px solid #90caf9; }
+
+        .arch-arrow { color: var(--blue); font-size: 20px; opacity: 0.4; }
+        .arch-layer { background: var(--light); border: 1px solid #e1e1e1; border-radius: 12px; padding: 16px; width: 100%; }
+        .arch-layer-title { font-size: 10px; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; text-align: center; }
+
+        /* Team Grid */
+        .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .team-item { background: var(--light); border: 1px solid #e8e8e8; border-radius: 8px; padding: 10px 12px; text-align: center; }
+        .team-item .name { font-size: 12px; font-weight: 700; color: var(--dark); }
+        .team-item .role { font-size: 10px; color: var(--gray); margin-top: 2px; }
+        .team-item.lead { border-left: 3px solid var(--blue); }
+
+        /* Page Details Table */
+        .page-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+        .page-table th { background: var(--blue); color: white; padding: 8px 12px; text-align: left; font-weight: 600; }
+        .page-table td { padding: 7px 12px; border-bottom: 1px solid #f0f0f0; color: var(--dark); vertical-align: top; }
+        .page-table tr:hover td { background: #f5f9ff; }
+        .page-table .page-name { font-weight: 600; color: var(--blue); }
+        .page-table .owner-col { white-space: nowrap; }
+        .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+        .dot.red { background: var(--red); }
+        .dot.green { background: var(--green); }
+        .dot.orange { background: var(--orange); }
+        .dot.purple { background: var(--purple); }
+        .dot.teal { background: var(--teal); }
+        .dot.blue { background: var(--blue); }
+
+        /* Tech Stack */
+        .tech-row { display: flex; gap: 10px; flex-wrap: wrap; }
+        .tech-tag { background: var(--light); border: 1px solid #e1e1e1; border-radius: 6px; padding: 6px 14px; font-size: 11px; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .tech-tag i { color: var(--blue); }
+
+        /* Stats */
+        .stats-row { display: flex; gap: 16px; justify-content: center; margin: 16px 0; }
+        .stat-box { text-align: center; padding: 12px 24px; background: var(--light); border-radius: 10px; border: 1px solid #e8e8e8; }
+        .stat-num { font-size: 28px; font-weight: 800; color: var(--blue); }
+        .stat-label { font-size: 10px; color: var(--gray); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* Footer */
+        .footer { text-align: center; padding: 16px 0; font-size: 10px; color: var(--gray); border-top: 1px solid #e8e8e8; margin-top: 20px; }
+
+        /* Pillars */
+        .pillars { display: flex; gap: 12px; margin-top: 16px; }
+        .pillar { flex: 1; background: var(--light); border: 1px solid #e1e1e1; border-radius: 10px; padding: 14px; text-align: center; }
+        .pillar i { font-size: 24px; color: var(--blue); margin-bottom: 8px; }
+        .pillar h4 { font-size: 12px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+        .pillar ul { list-style: none; text-align: left; }
+        .pillar ul li { font-size: 10px; color: var(--gray); padding: 2px 0; }
+        .pillar ul li::before { content: '•'; color: var(--blue); margin-right: 4px; font-weight: 700; }
+
+        @media print {
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .page { max-width: 100%; padding: 0 20px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="page">
+            <h1><i class="fas fa-shield-alt"></i> MCSfMSC Portal — Executive Overview</h1>
+            <p>Mission Critical Services for Microsoft Security Cloud — Internal Knowledge Hub</p>
+            <div class="badge">CONFIDENTIAL — INTERNAL USE ONLY</div>
+        </div>
+    </div>
+
+    <div class="page">
+
+        <!-- Key Stats -->
+        <div class="stats-row">
+            <div class="stat-box"><div class="stat-num">7</div><div class="stat-label">Portal Pages</div></div>
+            <div class="stat-box"><div class="stat-num">17</div><div class="stat-label">Active Customers</div></div>
+            <div class="stat-box"><div class="stat-num">8</div><div class="stat-label">Team Members</div></div>
+            <div class="stat-box"><div class="stat-num">60+</div><div class="stat-label">Resource Docs</div></div>
+        </div>
+
+        <!-- Site Architecture -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-sitemap"></i> Portal Architecture</div>
+            <div class="arch-container">
+                <!-- Home Page -->
+                <div class="arch-layer">
+                    <div class="arch-layer-title">Landing Page</div>
+                    <div class="arch-row" style="justify-content:center;">
+                        <div class="arch-box home" style="max-width:280px;">
+                            <i class="fas fa-home"></i>
+                            <h4>Home (index.html)</h4>
+                            <p>Quick Access Cards, Team & Leadership, Announcements</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+                <!-- Core Pages -->
+                <div class="arch-layer">
+                    <div class="arch-layer-title">Core Service Pages</div>
+                    <div class="arch-row">
+                        <div class="arch-box ir">
+                            <i class="fas fa-bug"></i>
+                            <h4>Issue Resolution</h4>
+                            <p>Severity 1/A/B/C Classification</p>
+                        </div>
+                        <div class="arch-box dv">
+                            <i class="fas fa-truck"></i>
+                            <h4>Delivery</h4>
+                            <p>Capabilities, Portals, Lifecycle, KPIs</p>
+                        </div>
+                        <div class="arch-box ob">
+                            <i class="fas fa-user-plus"></i>
+                            <h4>Onboarding</h4>
+                            <p>Customer Onboarding Flow & Docs</p>
+                        </div>
+                        <div class="arch-box pb">
+                            <i class="fas fa-book-open"></i>
+                            <h4>Playbooks & Videos</h4>
+                            <p>→ SharePoint Library</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="arch-arrow"><i class="fas fa-arrow-down"></i></div>
+                <!-- Supporting Pages -->
+                <div class="arch-layer">
+                    <div class="arch-layer-title">Knowledge & Resources</div>
+                    <div class="arch-row" style="justify-content:center;">
+                        <div class="arch-box tr">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h4>Training</h4>
+                            <p>Onboarding, Certs, SC-200/SC-100</p>
+                        </div>
+                        <div class="arch-box rs">
+                            <i class="fas fa-folder-open"></i>
+                            <h4>Resources</h4>
+                            <p>60+ Docs: Ops Review, Sprint, Dashboards</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MCSfMSC Capabilities -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-star"></i> MCSfMSC Service Capabilities (3 Pillars)</div>
+            <div class="pillars">
+                <div class="pillar">
+                    <i class="fas fa-headset"></i>
+                    <h4>Technical Engagement</h4>
+                    <ul>
+                        <li>Assigned Security Engineering Customer Lead</li>
+                        <li>Deep understanding of customer security environment</li>
+                    </ul>
+                </div>
+                <div class="pillar">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Reliability</h4>
+                    <ul>
+                        <li>Engineering enhanced awareness & readiness</li>
+                        <li>Security engineering roadmap insights</li>
+                    </ul>
+                </div>
+                <div class="pillar">
+                    <i class="fas fa-cogs"></i>
+                    <h4>Accelerated Resolution</h4>
+                    <ul>
+                        <li>15-min Sev 1/A response</li>
+                        <li>Engineering-led crisis management</li>
+                        <li>Self-escalate to Security Engineering</li>
+                        <li>RCA within 10 business days</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Details -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-file-alt"></i> Page-by-Page Breakdown</div>
+            <table class="page-table">
+                <thead>
+                    <tr><th>Page</th><th>Key Sections</th><th>Owner</th><th>Purpose</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="dot blue"></span><span class="page-name">Home</span></td>
+                        <td>7 Quick Access Cards, Team & Leadership (8 members), Announcements</td>
+                        <td class="owner-col">—</td>
+                        <td>Central hub & navigation</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot red"></span><span class="page-name">Issue Resolution</span></td>
+                        <td>Severity Classification (Sev 1 / A / B / C) with MCSfMSC & Customer Responsibilities</td>
+                        <td class="owner-col">Ankit Varshney</td>
+                        <td>Severity SLA & response matrix</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot orange"></span><span class="page-name">Delivery</span></td>
+                        <td>MCSfMSC Capabilities (3 Pillars), Support Case Portals, Engagement Lifecycle, KPIs, Templates, Guidelines</td>
+                        <td class="owner-col">Marlene Shaup</td>
+                        <td>Service delivery operations</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot purple"></span><span class="page-name">Onboarding</span></td>
+                        <td>6-Step Customer Onboarding Flow, Onboarding Documents</td>
+                        <td class="owner-col">Shalini Hada</td>
+                        <td>New customer onboarding</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot green"></span><span class="page-name">Playbooks & Videos</span></td>
+                        <td>SharePoint CTA, 6 Service Area Cards, Decks Library, Video Library</td>
+                        <td class="owner-col">Geordie McGarty</td>
+                        <td>Link to SharePoint playbooks</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot teal"></span><span class="page-name">Training</span></td>
+                        <td>New Engineer Onboarding (Week 1-4), Certification Paths (SC-900→SC-100), Resources</td>
+                        <td class="owner-col">Geordie McGarty</td>
+                        <td>Engineer training & certs</td>
+                    </tr>
+                    <tr>
+                        <td><span class="dot blue"></span><span class="page-name">Resources</span></td>
+                        <td>8 Categories: Ops Review, MBR, Sprint, Readiness, Dashboards, Agent/Copilot, Engineering, Quick Links</td>
+                        <td class="owner-col">—</td>
+                        <td>60+ document library</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Team -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-users"></i> Team & Leadership</div>
+            <div class="team-grid">
+                <div class="team-item lead"><div class="name">Marlene Shaup</div><div class="role">MCS Product Owner</div></div>
+                <div class="team-item"><div class="name">Ankit Varshney</div><div class="role">Issue Resolution</div></div>
+                <div class="team-item"><div class="name">Geordie McGarty</div><div class="role">Training</div></div>
+                <div class="team-item"><div class="name">Subha Sahoo</div><div class="role">Metrics & Reporting</div></div>
+                <div class="team-item"><div class="name">Shalini Hada</div><div class="role">Onboarding & SIP</div></div>
+                <div class="team-item"><div class="name">Miky Munteanu</div><div class="role">Strategic Guidance</div></div>
+                <div class="team-item"><div class="name">Sherry Shao</div><div class="role">AI Initiatives</div></div>
+                <div class="team-item"><div class="name">Alessandra Liu</div><div class="role">AI Initiatives</div></div>
+            </div>
+        </div>
+
+        <!-- Tech Stack -->
+        <div class="section">
+            <div class="section-title"><i class="fas fa-code"></i> Technology Stack</div>
+            <div class="tech-row">
+                <div class="tech-tag"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="tech-tag"><i class="fab fa-css3-alt"></i> CSS3 (Custom Properties)</div>
+                <div class="tech-tag"><i class="fab fa-js"></i> Vanilla JavaScript</div>
+                <div class="tech-tag"><i class="fas fa-icons"></i> Font Awesome 6.5</div>
+                <div class="tech-tag"><i class="fas fa-paint-brush"></i> Microsoft Fluent Design</div>
+                <div class="tech-tag"><i class="fab fa-github"></i> GitHub Hosted</div>
+                <div class="tech-tag"><i class="fas fa-feather"></i> No Build Tools Required</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>MCSfMSC Portal — github.com/jinruishao/MCSfMSCPortal — Generated February 13, 2026</p>
+            <p>© 2026 Microsoft. Mission Critical Services for Microsoft Security Cloud. Internal Use Only.</p>
+        </div>
+
+    </div>
+</body>
+</html>
