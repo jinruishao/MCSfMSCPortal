@@ -419,3 +419,9 @@ ul { list-style:none; }
 .customer-logo-fallback { width:80px; height:80px; background:var(--ms-blue-light); border-radius:12px; display:flex; align-items:center; justify-content:center; }
 .customer-logo-fallback span { font-size:16px; font-weight:700; color:var(--ms-blue); }
 @media (max-width:768px) { .customer-logos { gap:32px; } .customer-logo-item img, .customer-logo-fallback { width:60px; height:60px; } }
+/* Magenta card icon for AI Initiatives */
+.card-icon.magenta { background:#fce4ec; color:#c2185b; }
+
+/* Resource card - different style (full-width, subtle background) */
+.access-card.resource-card { grid-column: 1 / -1; background: linear-gradient(135deg, #e3f2fd, #f3e5f5); border-top: 3px solid var(--ms-blue); }
+.access-card.resource-card:hover { background: linear-gradient(135deg, #bbdefb, #e1bee7); }
