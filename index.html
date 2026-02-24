@@ -3,242 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCSfMSC Portal - Mission Critical Services for Microsoft Security Cloud</title>
+    <title>MCSfMSC Portal</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Top Navigation Bar -->
+    <!-- Top Nav -->
     <header class="top-nav">
         <div class="nav-container">
             <div class="nav-left">
                 <div class="logo-section">
                     <img src="assets/microsoft-logo.svg" alt="Microsoft" class="ms-logo">
                     <span class="nav-divider">|</span>
-                    <a href="index.html" class="portal-title-link">MCSfMSC Portal</a>
+                    <span class="portal-title-link" style="color:var(--neutral-white);font-weight:700;font-size:15px;">MCSfMSC Portal</span>
                 </div>
             </div>
             <nav class="nav-center">
                 <a href="index.html" class="nav-link active">Home</a>
-                <a href="pages/issue-resolution.html" class="nav-link">Issue Resolution</a>
-                <a href="pages/playbooks.html" class="nav-link">Playbooks & Videos</a>
-                <a href="pages/delivery.html" class="nav-link">Delivery</a>
-                <a href="pages/onboarding.html" class="nav-link">Onboarding</a>
-                <a href="pages/training.html" class="nav-link">Training</a>
-                <a href="pages/resources.html" class="nav-link">Resources</a>
             </nav>
-            <div class="nav-right">
-                <button class="icon-btn" title="Search (Ctrl+K)" id="searchToggle"><i class="fas fa-search"></i></button>
-                <div class="user-avatar" title="User Profile"><i class="fas fa-user-circle"></i></div>
-            </div>
-        </div>
-        <div class="search-bar" id="searchBar">
-            <div class="search-container">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" placeholder="Search resources, playbooks, documents..." id="searchInput">
-                <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
-            </div>
+            <div class="nav-right"><div class="user-avatar"><i class="fas fa-user-circle"></i></div></div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">Microsoft Security</div>
-            <h1>Mission Critical Services<br>for Microsoft Security Cloud</h1>
-            <p class="hero-subtitle">Your centralized hub for security service delivery, onboarding, playbooks, and issue resolution resources</p>
-            <div class="hero-actions">
-                <a href="pages/onboarding.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Get Started</a>
-                <a href="pages/onboarding.html#customer-onboarding-flow" class="btn btn-secondary"><i class="fas fa-user-plus"></i> Onboard a Customer</a>
-            </div>
-            <div class="hero-stats">
-                <div class="stat-item"><div class="stat-number">17</div><div class="stat-label">Active Customers</div></div>
-                <div class="stat-item"><div class="stat-number">50+</div><div class="stat-label">Playbooks</div></div>
-                <div class="stat-item"><div class="stat-number">500+</div><div class="stat-label">Issues Resolved</div></div>
-                <div class="stat-item"><div class="stat-number">10+</div><div class="stat-label">Security Services</div></div>
+    <!-- Welcome Hero -->
+    <section class="aed-hero">
+        <div class="aed-hero-inner">
+            <h1>Welcome to <span class="highlight">MCSfMSC Portal</span></h1>
+            <p>Your hub for Mission Critical Services for Microsoft Security Cloud operations</p>
+            <div class="aed-chat-bar">
+                <input type="text" placeholder="Chat with MCS Assistant..." disabled>
+                <button class="chat-send"><i class="fas fa-paper-plane"></i></button>
             </div>
         </div>
     </section>
 
-    <!-- Quick Access Cards -->
-    <section class="quick-access">
+    <!-- Content Tabs -->
+    <section class="aed-tabs-section">
         <div class="section-container">
-            <div class="section-header">
-                <h2>Quick Access</h2>
-                <p>Access the most important resources for MCSfMSC operations</p>
+            <div class="aed-tabs">
+                <button class="aed-tab active" data-tab="onboarding"><i class="fas fa-user-plus"></i> Customer Onboarding</button>
+                <button class="aed-tab" data-tab="incident"><i class="fas fa-bug"></i> Incident Response</button>
+                <button class="aed-tab" data-tab="delivery"><i class="fas fa-truck"></i> Service Delivery</button>
+                <button class="aed-tab" data-tab="playbooks"><i class="fas fa-book-open"></i> Playbooks &amp; Runbooks</button>
+                <button class="aed-tab" data-tab="training"><i class="fas fa-graduation-cap"></i> Training &amp; Certs</button>
+                <button class="aed-tab" data-tab="kpis"><i class="fas fa-chart-line"></i> KPIs &amp; Dashboards</button>
             </div>
-                        <div class="card-grid four-col">
-                <a href="pages/delivery.html" class="access-card">
-                    <div class="card-icon orange"><i class="fas fa-truck"></i></div>
-                    <div class="card-content">
-                        <h3>MCSfMSC Delivery</h3>
-                        <p>Service delivery resources, templates, and guidelines for customer engagements</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Marlene Shaup</span>
-                            <span><i class="fas fa-calendar"></i> Sep 28, 2025</span>
+
+            <!-- TAB: Customer Onboarding -->
+            <div class="aed-tab-content active" id="tab-onboarding">
+                <div class="tab-header">
+                    <h2>Customer Onboarding</h2>
+                    <p>Tools for seamless customer onboarding experiences</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Onboarding Checklist</h3>
+                            <p>Step-by-step checklist from contract signing to steady state operations</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="pages/onboarding.html" class="access-card">
-                    <div class="card-icon gold"><i class="fas fa-user-plus"></i></div>
-                    <div class="card-content">
-                        <h3>MCSfMSC Onboarding</h3>
-                        <p>Customer onboarding materials, checklists, and setup guides</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Shalini Hada</span>
-                            <span><i class="fas fa-calendar"></i> Feb 25, 2025</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Customer Environment Setup</h3>
+                            <p>Entitlement mapping guide — Azure (subscription-based) vs M365 (tenant-based)</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="pages/issue-resolution.html" class="access-card">
-                    <div class="card-icon purple"><i class="fas fa-bug"></i></div>
-                    <div class="card-content">
-                        <h3>Issue Resolution</h3>
-                        <p>Troubleshoot and resolve security issues with guided playbooks and workflows</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Ankit Varshney</span>
-                            <span><i class="fas fa-calendar"></i> Oct 31, 2025</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Kickoff Deck Template</h3>
+                            <p>Standard PowerPoint template for customer introduction meeting</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="pages/playbooks.html" class="access-card">
-                    <div class="card-icon green"><i class="fas fa-book-open"></i></div>
-                    <div class="card-content">
-                        <h3>Playbooks, Decks, Videos & Training</h3>
-                        <p>MCS playbooks, presentation decks, and training videos for security services</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Geordie McGarty</span>
-                            <span><i class="fas fa-calendar"></i> Dec 2, 2024</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Service Improvement Plan (SIP)</h3>
+                            <p>Post-onboarding improvement tracking and customer health review</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="pages/resources.html#dashboards" class="access-card">
-                    <div class="card-icon teal"><i class="fas fa-chart-bar"></i></div>
-                    <div class="card-content">
-                        <h3>MCS Dashboard</h3>
-                        <p>Power BI dashboards, SevA reports, and operational metrics for MCSfMSC</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Subha Sahoo</span>
-                            <span><i class="fas fa-calendar"></i> Jul 1, 2025</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Customer Journey Tracker</h3>
+                            <p>Track customer onboarding progress across all milestones</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="#" class="access-card">
-                    <div class="card-icon magenta"><i class="fas fa-robot"></i></div>
-                    <div class="card-content">
-                        <h3>AI Initiatives</h3>
-                        <p>MCS Agent, Copilot integrations, and AI-driven security automation projects</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-user"></i> Sherry Shao</span>
-                            <span><i class="fas fa-calendar"></i> Feb 12, 2026</span>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Welcome Email Templates</h3>
+                            <p>Pre-built communication templates for each onboarding phase</p>
                         </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
-                <a href="pages/resources.html" class="access-card resource-card">
-                    <div class="card-icon blue"><i class="fas fa-folder-open"></i></div>
-                    <div class="card-content">
-                        <h3>Resources & Documents</h3>
-                        <p>Ops Reviews, Sprint Planning, Readiness, Dashboards, and all Teams materials</p>
-                        <div class="card-meta">
-                            <span><i class="fas fa-file-alt"></i> 60+ Documents</span>
-                            <span><i class="fas fa-calendar"></i> Updated Weekly</span>
-                        </div>
-                    </div>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </a>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
             </div>
+
+            <!-- TAB: Incident Response -->
+            <div class="aed-tab-content" id="tab-incident">
+                <div class="tab-header">
+                    <h2>Incident Response</h2>
+                    <p>Severity classification, escalation paths, and crisis management</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="pages/issue-resolution.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Severity Classification Matrix</h3>
+                            <p>Sev 1 / A / B / C — response SLAs, MCSfMSC &amp; customer responsibilities</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Direct Connect Escalation</h3>
+                            <p>Self-escalate Sev 1/A issues directly to Microsoft Security Engineering</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>ICM &amp; Notification Workflow</h3>
+                            <p>Auto-trigger IcM Sev 2 for CLE team on Sev 1/A cases, on-call engagement</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>RCA Request Process</h3>
+                            <p>Customer-initiated root cause analysis — delivered within 10 business days</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Crisis Bridge &amp; SWARM Chat</h3>
+                            <p>Automated bridge creation with Command Center, AI-generated incident summaries</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Support Case Portals</h3>
+                            <p>Where to create SRs — Azure Portal vs MAC/M365 (Support Central)</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TAB: Service Delivery -->
+            <div class="aed-tab-content" id="tab-delivery">
+                <div class="tab-header">
+                    <h2>Service Delivery</h2>
+                    <p>Day-to-day engagement management, templates, and operational guidelines</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="pages/delivery.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>MCSfMSC 3 Capability Pillars</h3>
+                            <p>Technical Engagement / Reliability / Accelerated Resolution — the service model</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/delivery.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Engagement Lifecycle</h3>
+                            <p>Kickoff → Assessment → Implementation → Optimization → Steady State</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Monthly Service Review (MSR) Template</h3>
+                            <p>Standard deck for monthly status, metrics, and recommendations</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Quarterly Business Review (QBR) Template</h3>
+                            <p>Executive-level QBR with business outcomes, ROI, and roadmap</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Delivery KPIs &amp; Targets</h3>
+                            <p>IRT SLAs, Secure Score improvements, CSAT, RCA delivery timelines</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Operational Guidelines</h3>
+                            <p>Communication standards, security compliance, quality requirements</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TAB: Playbooks & Runbooks -->
+            <div class="aed-tab-content" id="tab-playbooks">
+                <div class="tab-header">
+                    <h2>Playbooks &amp; Runbooks</h2>
+                    <p>Service-specific playbooks, decks, and video trainings</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/Playbooks.aspx?web=1" target="_blank" class="aed-card featured">
+                        <div class="aed-card-body">
+                            <h3><i class="fas fa-external-link-alt" style="margin-right:6px;font-size:12px;"></i> MCS Playbooks Library (SharePoint)</h3>
+                            <p>Open the full MCS playbooks library — the single source of truth</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/Playbooks.aspx?web=1" target="_blank" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Microsoft Sentinel Playbook</h3>
+                            <p>SIEM operations, KQL queries, incident investigation, workspace management</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/Playbooks.aspx?web=1" target="_blank" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Microsoft Defender XDR Playbook</h3>
+                            <p>Endpoint, Identity, Cloud App protection, unified investigation</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/Playbooks.aspx?web=1" target="_blank" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Microsoft Entra ID Playbook</h3>
+                            <p>Identity governance, conditional access, authentication, PIM</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/Playbooks.aspx?web=1" target="_blank" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Microsoft Purview Playbook</h3>
+                            <p>Information protection, DLP, compliance management, insider risk</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>MCS Decks &amp; Video Library</h3>
+                            <p>Presentations, recorded trainings, and service-specific walkthroughs</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TAB: Training & Certs -->
+            <div class="aed-tab-content" id="tab-training">
+                <div class="tab-header">
+                    <h2>Training &amp; Certifications</h2>
+                    <p>Engineer onboarding, certification paths, and learning resources</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>New Engineer Onboarding (Week 1-4)</h3>
+                            <p>Structured 4-week ramp-up plan for new MCSfMSC engineers</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Certification: SC-900 (Fundamentals)</h3>
+                            <p>Microsoft Security, Compliance, and Identity Fundamentals</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Certification: SC-200 (Security Operations)</h3>
+                            <p>Microsoft Security Operations Analyst — Sentinel, Defender XDR</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Certification: SC-300 (Identity &amp; Access)</h3>
+                            <p>Microsoft Identity and Access Administrator — Entra ID</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Certification: SC-400 (Information Protection)</h3>
+                            <p>Microsoft Information Protection Administrator — Purview</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="pages/training.html" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Certification: SC-100 (Architect)</h3>
+                            <p>Microsoft Cybersecurity Architect — Advanced, strategic level</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- TAB: KPIs & Dashboards -->
+            <div class="aed-tab-content" id="tab-kpis">
+                <div class="tab-header">
+                    <h2>KPIs, Dashboards &amp; Data</h2>
+                    <p>Performance metrics, operational reviews, and data resources</p>
+                </div>
+                <div class="aed-card-grid">
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>MCS Dashboard (Power BI)</h3>
+                            <p>Live metrics dashboard — customer health, case trends, SLA performance</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Weekly Ops Review</h3>
+                            <p>Operations review deck, agenda, and action item tracker</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Monthly Business Review (MBR)</h3>
+                            <p>Delivery updates, pipeline status, resource allocation</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Sprint Planning</h3>
+                            <p>Sprint board, backlog, planning decks, and retrospective notes</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Scorecards &amp; Bowlers</h3>
+                            <p>Team performance scorecards, bowler charts, KPI trending</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                    <a href="#" class="aed-card">
+                        <div class="aed-card-body">
+                            <h3>Readiness &amp; Engineering</h3>
+                            <p>Readiness materials, engineering updates, security product roadmap</p>
+                        </div>
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </section>
 
-
-    <!-- Team & Leadership -->
-    <section class="content-section alt-bg">
+    <!-- Team & Leadership (compact) -->
+    <section class="aed-team-section">
         <div class="section-container">
-            <div class="section-header">
-                <h2><i class="fas fa-users"></i> Team & Leadership</h2>
-                <p>Key contacts and area owners for MCSfMSC</p>
-            </div>
-            <div class="team-grid">
-                <div class="team-card team-lead">
-                    <div class="team-icon"><i class="fas fa-crown"></i></div>
-                    <h3>Marlene Shaup</h3>
-                    <p class="team-role">MCS Product Owner</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-bug"></i></div>
-                    <h3>Ankit Varshney</h3>
-                    <p class="team-role">Issue Resolution</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <h3>Geordie McGarty</h3>
-                    <p class="team-role">Training</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-chart-bar"></i></div>
-                    <h3>Subha Sahoo</h3>
-                    <p class="team-role">Metrics & Reporting</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-user-plus"></i></div>
-                    <h3>Shalini Hada</h3>
-                    <p class="team-role">Customer Onboarding & Service Improvement Plan</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-compass"></i></div>
-                    <h3>Miky Munteanu</h3>
-                    <p class="team-role">Strategic Guidance</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Sherry Shao</h3>
-                    <p class="team-role">AI Initiatives</p>
-                </div>
-                <div class="team-card">
-                    <div class="team-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Alessandra Liu</h3>
-                    <p class="team-role">AI Initiatives</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Announcements -->
-    <section class="announcements-section">
-        <div class="section-container">
-            <div class="section-header"><h2><i class="fas fa-bullhorn"></i> Announcements</h2></div>
-            <div class="announcement-list">
-                <div class="announcement-item">
-                    <div class="announcement-date">Feb 2025</div>
-                    <div class="announcement-content">
-                        <h4>MCSfMSC Onboarding Process Updated</h4>
-                        <p>The customer onboarding workflow has been streamlined. <a href="pages/onboarding.html">Review updated procedures →</a></p>
-                    </div>
-                    <span class="announcement-badge new">New</span>
-                </div>
-                <div class="announcement-item">
-                    <div class="announcement-date">Oct 2025</div>
-                    <div class="announcement-content">
-                        <h4>Issue Resolution Framework v2.0</h4>
-                        <p>New issue resolution playbooks with improved escalation paths. <a href="pages/issue-resolution.html">View now →</a></p>
-                    </div>
-                    <span class="announcement-badge updated">Updated</span>
-                </div>
-                <div class="announcement-item">
-                    <div class="announcement-date">Sep 2025</div>
-                    <div class="announcement-content">
-                        <h4>Delivery Templates Refreshed</h4>
-                        <p>All service delivery templates updated. <a href="pages/delivery.html">View templates →</a></p>
-                    </div>
-                    <span class="announcement-badge updated">Updated</span>
-                </div>
+            <h2><i class="fas fa-users"></i> Team &amp; Leadership</h2>
+            <div class="aed-team-grid">
+                <div class="team-card lead"><div class="team-icon"><i class="fas fa-crown"></i></div><h3>Marlene Shaup</h3><p class="team-role">MCS Product Owner</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-bug"></i></div><h3>Ankit Varshney</h3><p class="team-role">Issue Resolution</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-book-open"></i></div><h3>Geordie McGarty</h3><p class="team-role">Training</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-chart-bar"></i></div><h3>Subha Sahoo</h3><p class="team-role">Metrics &amp; Reporting</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-user-plus"></i></div><h3>Shalini Hada</h3><p class="team-role">Customer Onboarding &amp; SIP</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-compass"></i></div><h3>Miky Munteanu</h3><p class="team-role">Strategic Guidance</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-robot"></i></div><h3>Sherry Shao</h3><p class="team-role">AI Initiatives</p></div>
+                <div class="team-card"><div class="team-icon"><i class="fas fa-robot"></i></div><h3>Alessandra Liu</h3><p class="team-role">AI Initiatives</p></div>
             </div>
         </div>
     </section>
@@ -246,44 +384,22 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>MCSfMSC Portal</h4>
-                    <p>Mission Critical Services for Microsoft Security Cloud — your one-stop resource hub.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Portal Pages</h4>
-                    <ul>
-                        <li><a href="pages/issue-resolution.html">Issue Resolution</a></li>
-                        <li><a href="pages/playbooks.html">Playbooks & Videos</a></li>
-                        <li><a href="pages/delivery.html">MCSfMSC Delivery</a></li>
-                        <li><a href="pages/onboarding.html">Onboarding</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>SharePoint Sources</h4>
-                    <ul>
-                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FIssue%20Resolution&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Issue Resolution</a></li>
-                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCS%20Playbooks%20Decks%20Videos&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Playbooks</a></li>
-                        <li><a href="https://microsoft.sharepoint-df.com/:f:/r/sites/CxE-Security-Care/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FCxE%2DSecurity%2DCare%2FShared%20Documents%2FMCSfMSC%20Delivery&p=true" target="_blank"><i class="fas fa-external-link-alt"></i> Delivery</a></li>
-                        <li><a href="https://microsoft.sharepoint-df.com/sites/CxE-Security-Care/SitePages/SED%20Customer%20Onboarding.aspx" target="_blank"><i class="fas fa-external-link-alt"></i> SED Onboarding</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:mcsfmsc@microsoft.com"><i class="fas fa-envelope"></i> mcsfmsc@microsoft.com</a></li>
-                        <li><a href="#"><i class="fas fa-comments"></i> Teams Channel</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Microsoft. Mission Critical Services for Microsoft Security Cloud.</p>
-            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Microsoft. Mission Critical Services for Microsoft Security Cloud.</p></div>
         </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" title="Back to Top"><i class="fas fa-chevron-up"></i></button>
+    <button class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></button>
     <script src="js/main.js"></script>
+    <script>
+        // AED-style tab switching
+        document.querySelectorAll('.aed-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.aed-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.aed-tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
