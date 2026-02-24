@@ -1,121 +1,154 @@
-# MCSfMSC Portal — One Pager
+# MCSfMSC Portal — Design One Pager
 
-> **Mission Critical Services for Microsoft Security Cloud — Internal Knowledge Hub**
-> Owner: Sherry Shao | Status: Live | GitHub: github.com/jinruishao/MCSfMSCPortal
-
----
-
-## Problem Statement
-
-MCSfMSC team's operational knowledge is scattered across SharePoint folders, Teams channels, emails, and individual decks. New engineers struggle to find the right playbooks. Severity workflows and escalation paths lack a single source of truth. Team members waste time navigating fragmented resources instead of serving customers.
+> **Inspired by**: AED Portal (aedportal.acesolutions.ms)
+> **For**: Mission Critical Services for Microsoft Security Cloud
+> **Author**: Sherry Shao | **Date**: February 24, 2026
 
 ---
 
-## Solution: MCSfMSC Portal
+## Vision
 
-A **lightweight, zero-dependency internal portal** that serves as the single front door to all MCSfMSC operational knowledge — connecting people, processes, and resources in one place.
+A single, content-organized portal where MCSfMSC engineers and stakeholders find the right operational knowledge instantly — organized by **what they need to do**, not where things are stored.
 
-**Design Principles:**
-- **Single pane of glass** — One URL for everything: severity matrix, delivery processes, playbooks, training, and 60+ resource docs
-- **Hub, not a copy** — Portal links to authoritative sources (SharePoint, admin portals) rather than duplicating content
-- **Zero friction** — Static HTML/CSS/JS, no build tools, no authentication, instant load, works offline
-- **Owner-driven** — Each page has a named owner responsible for content accuracy
+**Reference Model**: The AED Portal uses a tab-based, content-first design — one page, horizontal content domains, each revealing curated resource cards. No deep navigation, no separate pages to get lost in. We adopt the same pattern for MCSfMSC.
 
 ---
 
-## Portal Architecture
+## Design Approach: Content-Focused, Not Feature-Focused
+
+| Content-Focused (What we do) | Feature-Focused (What we avoid) |
+|-------------------------------|----------------------------------|
+| "How do I onboard a new customer?" | "We have a card component with hover effects" |
+| "What's the severity response matrix?" | "We built 7 pages with CSS animations" |
+| "Where are the playbooks for Sentinel?" | "There's a search bar and back-to-top button" |
+
+**Principle**: Every element on the portal exists to answer a specific operational question. If it doesn't answer a question, it doesn't belong.
+
+---
+
+## Content Architecture (Tab-Based, Single Page)
+
+Following the AED Portal model — one home page with **horizontal content tabs**, each tab surfaces curated cards linking to authoritative sources.
 
 ```
-                            ┌─────────────────────────┐
-                            │       HOME PAGE         │
-                            │  7 Quick Access Cards   │
-                            │  Team & Leadership (8)  │
-                            │  Announcements          │
-                            └────────────┬────────────┘
-                                         │
-                 ┌───────────────────────┬┴┬───────────────────────┐
-                 │                       │ │                       │
-    ┌────────────▼──────────┐ ┌──────────▼─▼────────┐ ┌───────────▼──────────┐
-    │   ISSUE RESOLUTION    │ │     DELIVERY        │ │    ONBOARDING        │
-    │                       │ │                     │ │                      │
-    │ • Severity Matrix     │ │ • 3 Capability      │ │ • 6-Step Customer    │
-    │   (1 / A / B / C)     │ │   Pillars           │ │   Onboarding Flow   │
-    │ • MCSfMSC & Customer  │ │ • Support Case      │ │ • Onboarding Docs   │
-    │   Responsibilities    │ │   Portals           │ │                      │
-    │                       │ │ • Engagement         │ │ Owner: Shalini       │
-    │ Owner: Ankit          │ │   Lifecycle          │ └──────────────────────┘
-    └───────────────────────┘ │ • KPIs & Templates   │
-                              │                     │
-                              │ Owner: Marlene       │
-                              └─────────────────────┘
-
-    ┌───────────────────────┐ ┌─────────────────────┐ ┌──────────────────────┐
-    │  PLAYBOOKS & VIDEOS   │ │     TRAINING        │ │    RESOURCES         │
-    │                       │ │                     │ │                      │
-    │ → SharePoint Library  │ │ • Week 1-4 Onboard  │ │ • 60+ Documents      │
-    │   (Single CTA)        │ │ • Cert Paths        │ │ • 8 Categories       │
-    │ • 6 Service Areas     │ │   SC-900 → SC-100   │ │   (Ops, Sprint,      │
-    │ • Decks & Videos      │ │ • Learning Links    │ │    Dashboards, AI)   │
-    │                       │ │                     │ │                      │
-    │ Owner: Geordie        │ │ Owner: Geordie      │ │                      │
-    └───────────────────────┘ └─────────────────────┘ └──────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│  Welcome to MCSfMSC Portal, [User]                                  │
+│  Your hub for MCS Security Cloud operations                         │
+│  ┌──────────────────────────────────────────────────────────────┐    │
+│  │  Chat with MCS Assistant...                              ➤  │    │
+│  └──────────────────────────────────────────────────────────────┘    │
+├──────────────────────────────────────────────────────────────────────┤
+│ ┌─────────┐┌──────────┐┌──────────┐┌──────────┐┌────────┐┌───────┐  │
+│ │Customer ││ Incident ││ Service  ││Playbooks ││Training││  KPIs │  │
+│ │Onboard  ││ Response ││ Delivery ││& Runbooks││& Certs ││& Data │  │
+│ └─────────┘└──────────┘└──────────┘└──────────┘└────────┘└───────┘  │
+├──────────────────────────────────────────────────────────────────────┤
+│                                                                      │
+│  [Selected Tab Content — Resource Cards]                             │
+│                                                                      │
+│  ┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐     │
+│  │ Card Title     → │ │ Card Title     → │ │ Card Title     → │     │
+│  │ Description      │ │ Description      │ │ Description      │     │
+│  └──────────────────┘ └──────────────────┘ └──────────────────┘     │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## Core Capability: MCSfMSC Service Delivery Model
+## Content Domains & What They Answer
 
-```
-  ┌──────────────────┐        ┌──────────────────┐        ┌──────────────────┐
-  │    TECHNICAL      │◄──────►│   RELIABILITY     │◄──────►│   ACCELERATED    │
-  │   ENGAGEMENT      │        │                  │        │   RESOLUTION     │
-  │                  │        │                  │        │                  │
-  │ • Assigned CLE   │        │ • Engineering    │        │ • 15-min Sev 1/A │
-  │   who advocates  │        │   awareness &    │        │ • Crisis mgmt    │
-  │   for customer   │        │   readiness      │        │ • Self-escalate  │
-  │ • Deep product   │        │ • Roadmap        │        │   to Engineering │
-  │   knowledge      │        │   insights       │        │ • RCA in 10 days │
-  └──────────────────┘        └──────────────────┘        └──────────────────┘
-```
+### 1. Customer Onboarding
+*"How do I bring a new MCS customer live?"*
+- Onboarding Checklist — Step-by-step from contract to steady state
+- Customer Environment Setup — Entitlement mapping (Azure vs M365)
+- Kickoff Deck Template — Standard customer introduction deck
+- Service Improvement Plan — Post-onboarding improvement tracking
 
----
+### 2. Incident Response
+*"A Sev 1 just came in. What do I do?"*
+- Severity Classification Matrix — 1 / A / B / C with response SLAs
+- MCSfMSC vs Customer Responsibilities — Who does what, when
+- Direct Connect Escalation — Self-escalate to Security Engineering
+- ICM & Notification Workflow — Auto-trigger, on-call, bridge creation
+- RCA Request Process — Customer-initiated, 10 business day SLA
 
-## Severity Response Model
+### 3. Service Delivery
+*"How do I run the day-to-day engagement?"*
+- MCSfMSC 3 Pillars — Technical Engagement / Reliability / Accelerated Resolution
+- Engagement Lifecycle — Kickoff → Assessment → Implementation → Optimization → Steady State
+- Support Case Portals — Azure (subscription) vs MAC/M365 (tenant)
+- MSR & QBR Templates — Monthly and quarterly review decks
+- Delivery KPIs — IRT, Secure Score, CSAT targets
 
-| Severity | Impact | MCSfMSC Response | Customer Action |
-|----------|--------|-----------------|-----------------|
-| **1** | Catastrophic | 15 min, CLE engaged, 24×7, Engineering-led crisis | Direct Connect, Senior exec notify, 24×7 |
-| **A** | Critical | 15 min, CLE engaged, 24×7, Engineering-led crisis | Direct Connect, Mgmt notify, 24×7 |
-| **B** | Moderate | 2 hours | Resources allocated, Change control |
-| **C** | Minimum | 4 hours, Business hours only | Resources allocated, 24h response |
+### 4. Playbooks & Runbooks
+*"How do I handle a Sentinel/Defender/Purview issue?"*
+- → SharePoint Playbooks Library (single authoritative source)
+- Service-specific runbooks for Sentinel, Defender XDR, Entra, Purview, MDO
+- Decks & Presentations library
+- Video walkthroughs & recorded trainings
 
----
+### 5. Training & Certifications
+*"I'm new. How do I ramp up?"*
+- Week 1-4 Onboarding Plan for new engineers
+- Certification Paths — SC-900 → SC-200 → SC-300 → SC-400 → SC-100
+- Learning resources & lab environments
 
-## Team
-
-| Role | Name | Focus Area |
-|------|------|------------|
-| **Product Owner** | Marlene Shaup | MCS Delivery |
-| Issue Resolution | Ankit Varshney | Severity, Escalation, Notification |
-| Training | Geordie McGarty | Playbooks, Decks, Videos, Engineer Training |
-| Metrics & Reporting | Subha Sahoo | MCS Dashboard, Power BI |
-| Customer Onboarding | Shalini Hada | Onboarding, Service Improvement Plan |
-| Strategic Guidance | Miky Munteanu | Leadership |
-| AI Initiatives | Sherry Shao | MCS Agent, Copilot Integrations |
-| AI Initiatives | Alessandra Liu | AI-driven Security Automation |
-
----
-
-## What's Next
-
-| Initiative | Description | Status |
-|------------|-------------|--------|
-| **ICM Auto-Trigger** | Auto IcM Sev 2 for Sev 1/A cases → CLE & PHE teams | Proposed |
-| **Unified Comms Strategy** | Standardized incident updates with AI summarization | In Discussion |
-| **Direct Connect Alignment** | Clarify process to avoid ICM sprawl | Follow-up Scheduled |
-| **MCS Agent / Copilot** | AI-driven automation for security operations | In Progress |
-| **Resource Links** | Replace 60+ placeholder links with real SharePoint URLs | Pending |
+### 6. KPIs, Dashboards & Data
+*"How are we performing? Where's the data?"*
+- MCS Dashboard (Power BI)
+- Ops Review materials (weekly)
+- Sprint Planning docs
+- Scorecards & bowlers
 
 ---
 
-*Generated: February 13, 2026 | Static HTML/CSS/JS — No build tools, no auth, no dependencies*
+## How This Differs From Current State
+
+| Current (Multi-page) | Proposed (AED-style) |
+|-----------------------|----------------------|
+| 7 separate HTML pages | Single page with content tabs |
+| Navigate away to find content | Everything visible from home |
+| Feature-organized (page per feature) | Content-organized (tab per workflow) |
+| Static cards with placeholder links | Curated cards answering real questions |
+| No AI assistant | Embedded MCS chat assistant |
+| No personalization | Personalized welcome + role context |
+
+---
+
+## Content Principles
+
+1. **Answer a question** — Every card must answer "How do I...?" or "Where is...?"
+2. **Link, don't duplicate** — Point to SharePoint/Teams as the source of truth
+3. **Name the owner** — Each content domain has a named owner for accuracy
+4. **Keep it current** — Stale content is worse than no content
+5. **One click away** — From tab to answer in one click maximum
+
+---
+
+## Content Owners
+
+| Content Domain | Owner | Scope |
+|----------------|-------|-------|
+| Customer Onboarding | Shalini Hada | Onboarding workflow, SIP, customer docs |
+| Incident Response | Ankit Varshney | Severity, escalation, ICM, RCA |
+| Service Delivery | Marlene Shaup | Lifecycle, KPIs, templates, guidelines |
+| Playbooks & Runbooks | Geordie McGarty | SharePoint library, decks, videos |
+| Training & Certs | Geordie McGarty | Engineer onboarding, cert paths |
+| KPIs & Dashboards | Subha Sahoo | Power BI, ops review, scorecards |
+| AI Assistant | Sherry Shao | MCS Agent / Copilot integration |
+
+---
+
+## Next Steps
+
+1. **Consolidate current 7 pages → single-page tab layout** (AED pattern)
+2. **Audit every card**: Does it answer a real question? Remove if not
+3. **Replace all placeholder links** with real SharePoint/Teams URLs
+4. **Integrate MCS AI Assistant** (chat interface on home page)
+5. **Add personalization** — role-based content surfacing
+6. **Review with content owners** — validate each domain's cards
+
+---
+
+*This is a content blueprint, not a feature spec. The portal succeeds when engineers stop searching and start finding.*
